@@ -1,0 +1,181 @@
+<title>DimensionCloud</title>
+
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+
+
+
+
+<style>
+    *{
+  box-sizing: border-box;
+}
+html, body{
+  height: 100%
+}
+body{
+  background: black;
+  padding: 0;
+  margin: 0;
+}
+canvas{
+  background: black;
+  cursor: pointer;
+}
+</style>
+
+<script>
+    // todos
+// sort dots på x for kun at regne distance ud på nødvendige
+// erstat dest logik med direction for at forberede gravity
+
+////////////////////////////////////////////////////////////
+//                                                        //
+//       CLICK TO ADD MORE PARTICLES ON THE BOARD         //
+//                                                        //
+////////////////////////////////////////////////////////////
+
+// Try messing around with the custom settings below
+// to achieve new patterns
+
+let dotsCount = 75;
+let distance = 150;
+let speed = 1;
+let lineWidth = 0.1;
+let dotRadius = 0.5;
+let dotColor = '#fff';
+let makeDots = true;
+
+// Custom settings over
+
+let canvas = document.getElementById('canvas');
+let ctx = canvas.getContext('2d');
+
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight - 30;
+
+let mouse = {
+  active: true,
+  x: 0,
+  y: 0
+}
+
+let dots = _.range(0, dotsCount).map(dot => {
+  return {
+    x: Math.floor(Math.random() * width),
+    y: Math.floor(Math.random() * height),
+    dest: {
+      x: newDestX(),
+      y: newDestY()
+    }
+  }
+});
+function getDifference(a,b){
+  return a > b ? a - b : b - a;
+}
+function getDistance(a,b){
+  let first = a.x - b.x
+  let second = a.y - b.y
+  
+  return Math.sqrt( first*first + second*second )
+}
+function getClosest(x,y){
+  let closest;
+  closest = ( mouse.active ? _.concat(dots, mouse) : dots).filter(dot => getDistance(dot, { x, y }) < distance);
+  closest = closest.map(dot => {
+    return _.merge({}, dot, {
+      distance: getDistance(dot, { x, y })
+    })
+  })
+
+  return closest
+}
+function drawLine(from, to, fromToDistance){
+  ctx.lineWidth = lineWidth;
+  ctx.beginPath();
+  ctx.moveTo(from.x,from.y)
+  ctx.lineTo(to.x, to.y);
+  ctx.strokeStyle = `rgba(255, 255, 255, ${1 - 1 / ( distance / fromToDistance )} )`;
+  ctx.stroke();
+}
+function drawAll(){
+  
+  ctx.fillStyle = dotColor;
+  
+  dots.forEach((dot, i) => {
+    
+    ctx.beginPath();
+    ctx.arc(dot.x,dot.y,dotRadius,0,2*Math.PI);
+    ctx.fill();
+
+    let closest = getClosest(dot.x,dot.y);
+    
+    closest.forEach((closeDot, i) => drawLine(closeDot, dot, closeDot.distance))
+
+  })
+
+}
+function newDestX(){
+  let rand = Math.floor(Math.random() * 2);
+  return rand ? 0 : width
+}
+function newDestY(){
+  let rand = Math.floor(Math.random() * 2);
+  return rand ? 0 : height
+}
+function addDot(x, y){
+  dots.push({
+    x,
+    y,
+    dest: {
+      x: newDestX(),
+      y: newDestY()
+    }
+  })
+}
+function animate(){
+  
+  requestAnimationFrame(animate)
+
+  if(makeDots)
+    ctx.clearRect(0, 0, width, height);
+
+  dots.forEach(dot => {
+    
+    let destination = mouse.active ? mouse : dot.dest
+    
+    getDifference(dot.x, dot.dest.x) <= speed ? dot.dest.x = newDestX() : dot.x < dot.dest.x ? dot.x = dot.x += speed : dot.x += -speed
+    getDifference(dot.y, dot.dest.y) <= speed ? dot.dest.y = newDestY() : dot.y < dot.dest.y ? dot.y = dot.y += speed : dot.y += -speed
+
+  })
+
+  drawAll();
+}
+
+animate()
+
+canvas.addEventListener('click', e => {
+    addDot(e.clientX, e.clientY);
+  }, false)
+
+canvas.addEventListener('mouseenter', e => {
+  mouse.active = true;
+})
+canvas.addEventListener('mousemove', e => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+})
+canvas.addEventListener('mouseleave', e => {
+  mouse.active = false;
+})
+
+window.addEventListener('resize', e => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight - 30;
+  dots.forEach(dot => {
+    dot.dest.x = dot.dest.x > 0 ? width : 0;
+    dot.dest.y = dot.dest.y > 0 ? height : 0;
+  })
+}, false)
+</script>
