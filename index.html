@@ -1,627 +1,261 @@
-<div class="content">
-  <div id="content-canvas"></div>
-  <div class="cursor">
-    <div class="pointer"></div>
-  </div>
-</div>  
-<script id="vertexShader" type="f">
-     #define TAU 6.28318530718
-  
-      precision highp float;
+<html>
+  <title>DimensionCloud</title>
+  <head></head>
 
-      attribute float pindex;
-      attribute vec3 position;
-      attribute vec3 offset;
-      attribute vec2 uv;
-      attribute float angle;
+  <body>
+    <div id="particle-canvas"></div>
+  </body>
+</html>
+<html>
+  <head></head>
 
-      uniform mat4 modelViewMatrix;
-      uniform mat4 projectionMatrix;
+  <body>
+    <div id="particle-canvas"></div>
+  </body>
 
-      uniform float uTime;
-      uniform float uRandom;
-      uniform float uDepth;
-      uniform float uSize;
-      uniform vec3 uMouse;
-      uniform vec2 uTextureSize;
-      uniform sampler2D uTexture;
-      uniform sampler2D uTouch;
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
-      varying vec2 vPUv;
-      varying vec2 vUv;
+    #particle-canvas {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 
-      // Description : Array and textureless GLSL 2D simplex noise function.
-      //      Author : Ian McEwan, Ashima Arts.
-      //  Maintainer : ijm
-      //     Lastmod : 20110822 (ijm)
-      //     License : Copyright (C) 2011 Ashima Arts. All rights reserved.
-      //               Distributed under the MIT License. See LICENSE file.
-      //               https://github.com/ashima/webgl-noise
-      //
+  <script>
+    // particle.min.js hosted on GitHub
+    // Scroll down for initialisation code
 
-      vec3 mod289_1_0(vec3 x) {
-        return x - floor(x * (1.0 / 289.0)) * 289.0;
-      }
-
-      vec2 mod289_1_0(vec2 x) {
-        return x - floor(x * (1.0 / 289.0)) * 289.0;
-      }
-
-      vec3 permute_1_1(vec3 x) {
-        return mod289_1_0(((x*34.0)+1.0)*x);
-      }
-
-      float snoise_1_2(vec2 v){
-        const vec4 C = vec4(0.211324865405187,  // (3.0-sqrt(3.0))/6.0
-                            0.366025403784439,  // 0.5*(sqrt(3.0)-1.0)
-                           -0.577350269189626,  // -1.0 + 2.0 * C.x
-                            0.024390243902439); // 1.0 / 41.0
-      // First corner
-        vec2 i  = floor(v + dot(v, C.yy) );
-        vec2 x0 = v -   i + dot(i, C.xx);
-
-      // Other corners
-        vec2 i1;
-        //i1.x = step( x0.y, x0.x ); // x0.x > x0.y ? 1.0 : 0.0
-        //i1.y = 1.0 - i1.x;
-        i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
-        // x0 = x0 - 0.0 + 0.0 * C.xx ;
-        // x1 = x0 - i1 + 1.0 * C.xx ;
-        // x2 = x0 - 1.0 + 2.0 * C.xx ;
-        vec4 x12 = x0.xyxy + C.xxzz;
-        x12.xy -= i1;
-
-      // Permutations
-        i = mod289_1_0(i); // Avoid truncation effects in permutation
-        vec3 p = permute_1_1( permute_1_1( i.y + vec3(0.0, i1.y, 1.0 ))
-          + i.x + vec3(0.0, i1.x, 1.0 ));
-
-        vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
-        m = m*m ;
-        m = m*m ;
-
-      // Gradients: 41 points uniformly over a line, mapped onto a diamond.
-      // The ring size 17*17 = 289 is close to a multiple of 41 (41*7 = 287)
-
-        vec3 x = 2.0 * fract(p * C.www) - 1.0;
-        vec3 h = abs(x) - 0.5;
-        vec3 ox = floor(x + 0.5);
-        vec3 a0 = x - ox;
-
-      // Normalise gradients implicitly by scaling m
-      // Approximation of: m *= inversesqrt( a0*a0 + h*h );
-        m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
-
-      // Compute final noise value at P
-        vec3 g;
-        g.x  = a0.x  * x0.x  + h.x  * x0.y;
-        g.yz = a0.yz * x12.xz + h.yz * x12.yw;
-        return 130.0 * dot(m, g);
-      }
-
-      float random(float n){
-          return fract(sin(n) * 43758.5453123);
-      }
-
-      void main() {
-        	vUv = uv;
-
-          // particle uv
-          vec2 puv = offset.xy / uTextureSize;
-          vPUv = puv;
-
-          // pixel color
-          vec4 colA = texture2D(uTexture, puv);
-          float grey = dot(colA.rgb, vec3(0.299, 0.587, 0.114));
-
-          // displacement
-          vec3 displaced = offset;
-          // randomise
-          displaced.xy += vec2(random(pindex) - 0.5, random(offset.x + pindex) - 0.5) * uRandom;
-          float rndz = (random(pindex) + snoise_1_2(vec2(pindex * 0.5, uTime * 0.5)));
-          displaced.z += rndz * (random(pindex) * 2.0 * uDepth);
-          // center
-          displaced.xy -= uTextureSize * 0.5;
-
-          // touch
-          float t = texture2D(uTouch, puv).r;
-          displaced.z += t * 20.0 * rndz;
-          displaced.x += cos(angle) * t * 20.0 * rndz;
-          displaced.y += sin(angle) * t * 20.0 * rndz;
-
-          // particle size
-          float psize = (snoise_1_2(vec2(uTime, pindex) * 0.5) + 2.0);
-          psize *= max(grey, 0.2);
-          psize *= uSize;
-
-          vec3 dir = position - uMouse * .5;
-          float dist = length(dir);
-          float range = .5;
-          
-          if(dist < range){
-            float ratio = clamp(1. - dist / range, 0., 1.);
-            displaced -= dir * ratio * 10.;
+    !(function (a) {
+      var b =
+        ("object" == typeof self && self.self === self && self) ||
+        ("object" == typeof global && global.global === global && global);
+      "function" == typeof define && define.amd
+        ? define(["exports"], function (c) {
+            b.ParticleNetwork = a(b, c);
+          })
+        : "object" == typeof module && module.exports
+        ? (module.exports = a(b, {}))
+        : (b.ParticleNetwork = a(b, {}));
+    })(function (a, b) {
+      var c = function (a) {
+        (this.canvas = a.canvas),
+          (this.g = a.g),
+          (this.particleColor = a.options.particleColor),
+          (this.x = Math.random() * this.canvas.width),
+          (this.y = Math.random() * this.canvas.height),
+          (this.velocity = {
+            x: (Math.random() - 0.5) * a.options.velocity,
+            y: (Math.random() - 0.5) * a.options.velocity,
+          });
+      };
+      return (
+        (c.prototype.update = function () {
+          (this.x > this.canvas.width + 20 || this.x < -20) &&
+            (this.velocity.x = -this.velocity.x),
+            (this.y > this.canvas.height + 20 || this.y < -20) &&
+              (this.velocity.y = -this.velocity.y),
+            (this.x += this.velocity.x),
+            (this.y += this.velocity.y);
+        }),
+        (c.prototype.h = function () {
+          this.g.beginPath(),
+            (this.g.fillStyle = this.particleColor),
+            (this.g.globalAlpha = 0.7),
+            this.g.arc(this.x, this.y, 1.5, 0, 2 * Math.PI),
+            this.g.fill();
+        }),
+        (b = function (a, b) {
+          (this.i = a),
+            (this.i.size = {
+              width: this.i.offsetWidth,
+              height: this.i.offsetHeight,
+            }),
+            (b = void 0 !== b ? b : {}),
+            (this.options = {
+              particleColor:
+                void 0 !== b.particleColor ? b.particleColor : "#fff",
+              background: void 0 !== b.background ? b.background : "#1a252f",
+              interactive: void 0 !== b.interactive ? b.interactive : !0,
+              velocity: this.setVelocity(b.speed),
+              density: this.j(b.density),
+            }),
+            this.init();
+        }),
+        (b.prototype.init = function () {
+          if (
+            ((this.k = document.createElement("div")),
+            this.i.appendChild(this.k),
+            this.l(this.k, {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              "z-index": 1,
+            }),
+            /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(this.options.background))
+          )
+            this.l(this.k, { background: this.options.background });
+          else {
+            if (!/\.(gif|jpg|jpeg|tiff|png)$/i.test(this.options.background))
+              return (
+                console.error(
+                  "Please specify a valid background image or hexadecimal color"
+                ),
+                !1
+              );
+            this.l(this.k, {
+              background:
+                'url("' + this.options.background + '") no-repeat center',
+              "background-size": "cover",
+            });
           }
-
-          displaced += position * psize;
-
-          // final position
-          vec4 mvPosition = modelViewMatrix * vec4(displaced, 1.0);
-          vec4 finalPosition = projectionMatrix * mvPosition;
-
-          gl_Position = finalPosition;
-      }
-</script>
-<script id="fragmentShader" type="f">
-      precision highp float;
-
-      uniform sampler2D uTexture;
-
-      varying vec2 vPUv;
-      varying vec2 vUv;
-
-      void main() {
-        vec4 color = vec4(0.0);
-        vec2 uv = vUv;
-        vec2 puv = vPUv;
-
-        // pixel color
-        vec4 colA = texture2D(uTexture, puv);
-
-        // greyscale
-        float grey = dot(colA.rgb, vec3(0.299, 0.587, 0.114));
-        vec4 colB = vec4(vec3(grey), 1.0);
-
-        // circle
-        float border = 0.5;
-        float radius = 0.5;
-        float dist =  1. - distance(uv, vec2(0.5)) / radius;
-        float t = smoothstep(0.0, border, dist);
-
-        // final color
-        color = colB;
-        color.a = t;
-
-        gl_FragColor = color;
-      }
-</script>
-
-<style>
-  body{
-  margin: 0;
-  cursor: none;
-  overflow: hidden;
-}
-
-canvas{
-  width: 100%;
-  height: 100vh;
-  display: block;
-}
-
-.content{
-  overflow: hidden;
-}
-
-.cursor{
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  pointer-events: none;
-  border: 1px solid rgba(255,255,255, 0.7);
-}
-</style>
-
-<script>
-  const easeOutSine = (t, b, c, d) => {
-  return c * Math.sin(t / d * (Math.PI / 2)) + b;
-};
-
-class PositionMouseInCanvas {
-  constructor(scene, group, camera) {
-    this.scene = scene;
-    this.group = group;
-    this.camera = camera;
-    this.raycaster = new THREE.Raycaster();
-    this.mouse = new THREE.Vector2(0, 0);
-
-    this.initPlane();
-    this.initTouch();
-  }
-
-  initPlane() {
-    const planeGeo = new THREE.PlaneGeometry(1, 1, 32);
-    const planeMat = new THREE.MeshBasicMaterial({
-      color: "#000",
-      side: THREE.DoubleSide
-    });
-
-    this.plane = new THREE.Mesh(planeGeo, planeMat);
-    this.group.add(this.plane);
-
-    this.canvas = document.querySelector("#interactive-particles");
-    this.cursor = document.querySelector(".cursor")
-    
-    this.boundCanvas = this.getBound(this.canvas)
-    this.boundCursor = this.getBound(this.cursor)
-    
-    this.canvas.addEventListener("mousemove", e => this.onMouseMove(e));
-    window.addEventListener("resize", () => this.onResize())
-  }
-  
-  getBound(el){
-    const bound = el.getBoundingClientRect()
-    return {w: bound.width, h: bound.height, left: bound.left, top: bound.top}
-  }
-  
-  onResize(){
-    this.boundCanvas = this.getBound(this.canvas)
-    this.boundCursor = this.getBound(this.cursor)
-  }
-
-  initTouch() {
-    if (!this.touch) this.touch = new TouchTexture();
-
-    const uniforms = this.group.children[0].material.uniforms;
-    uniforms.uTouch.value = this.touch.texture;
-  }
-
-  onMouseMove(e) {
-    const t = e.touches ? e.touches[0] : e;
-    const touch = { x: t.clientX, y: t.clientY };
-
-    this.mouse.x =
-      touch.x / this.boundCanvas.w * 2 - 1;
-    this.mouse.y =
-      -(touch.y / this.boundCanvas.h) * 2 + 1;
-    this.raycaster.setFromCamera(this.mouse, this.camera);
-
-    const intersects = this.raycaster.intersectObjects([this.plane]);
-
-    if (intersects.length > 0) {
-      this.touch.addTouch(intersects[0].uv);
-    }
-    
-    TweenMax.to(this.cursor, 0.5, {
-      x: touch.x - this.boundCursor.w / 2,
-      y: touch.y - this.boundCursor.h / 2
-    })
-  }
-
-  update() {
-    if(this.touch) this.touch.update()
-    
-  }
-}
-
-// Carga modelos 3D externos o texturas dependiendo de la opcion
-const textureLoader = opt =>
-  opt === "obj" ? new THREE.OBJLoader() : new THREE.TextureLoader();
-
-class WebGL {
-  constructor() {
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.camera = new THREE.PerspectiveCamera(
-      45,
-      innerWidth / innerHeight,
-      0.1,
-      1000
-    );
-    this.scene = new THREE.Scene();
-    this.group = new THREE.Group();
-    this.clock = new THREE.Clock();
-
-    //this.helper = new Helper(this.scene);
-    this.loader = textureLoader();
-
-    this.update = this.update.bind(this);
-  }
-
-  // Coloca el objeto renderer dentro del DOM
-  // Instaciamos la clase OrbitControls para mover la camara
-  // Agrega la camara y el objeto group dentro de la escena
-  init() {
-    const _contentCanvas = document.querySelector("#content-canvas");
-
-    this.renderer.domElement.id = "interactive-particles";
-
-    this.renderer.setPixelRatio(devicePixelRatio);
-    this.renderer.shadowMap.enabled = true;
-    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-    this.scene.add(this.camera);
-    this.scene.add(this.group);
-
-    this.camera.position.set(0, 0, 1);
-    this.camera.lookAt(this.scene.position);
-
-    _contentCanvas.appendChild(this.renderer.domElement);
-
-    this.initFn();
-  }
-
-  // Inicia todos los metodos que serviran para crear nuestro espacio y objetos
-  initFn() {
-    this.loader.load(
-      "https://i.ibb.co/q7C8QXc/photo-1495462911434-be47104d70fa.jpg",
-      texture => {
-        this.createMesh(texture);
-        this.show();
-
-        this.positionMouse = new PositionMouseInCanvas(
-          this.scene,
-          this.group,
-          this.camera
-        );
-
-        this.update();
-
-        window.addEventListener("resize", this.onResize);
-      }
-    );
-  }
-
-  // Crea el objeto (geometria, material y malla) para luego agregarlo al escenario
-  createMesh(texture) {
-    this.width = texture.image.width;
-    this.height = texture.image.height;
-
-    this.uniforms = {
-      uTime: { value: 0 },
-      uRandom: { value: 1.0 },
-      uDepth: { value: 2.0 },
-      uSize: { value: 0.0 },
-      uTextureSize: { value: new THREE.Vector2(this.width, this.height) },
-      uTexture: { value: texture },
-      uMouse: { value: new THREE.Vector3() },
-      uTouch: { value: null }
-    };
-
-    texture.minFilter = THREE.LinearFilter;
-    texture.magFilter = THREE.LinearFilter;
-    texture.format = THREE.RGBFormat;
-
-    this.numPoints = this.width * this.height;
-    const threshold = 34;
-    const [numVisible, originalColors] = this.discard(texture, threshold);
-
-    const _particlesMat = new THREE.RawShaderMaterial({
-      uniforms: this.uniforms,
-      vertexShader: vertexShader.textContent,
-      fragmentShader: fragmentShader.textContent,
-      depthTest: false,
-      transparent: true,
-      side: THREE.DoubleSide
-    });
-
-    const bufferGeometry = new THREE.InstancedBufferGeometry();
-    const planeGeo = new THREE.PlaneBufferGeometry()
-    
-    bufferGeometry.copy(planeGeo)
-
-    const indices = new Uint16Array(numVisible);
-    const offsets = new Float32Array(numVisible * 3);
-    const angles = new Float32Array(numVisible);
-
-    for (let i = 0, j = 0; i < this.numPoints; i++) {
-      if (originalColors[i * 4] <= threshold) continue;
-
-      offsets[j * 3 + 0] = i % this.width;
-      offsets[j * 3 + 1] = Math.floor(i / this.width);
-
-      indices[j] = i;
-
-      angles[j] = Math.random() * Math.PI;
-
-      j++;
-    }
-
-    bufferGeometry.addAttribute(
-      "pindex",
-      new THREE.InstancedBufferAttribute(indices, 1, false)
-    );
-    bufferGeometry.addAttribute(
-      "offset",
-      new THREE.InstancedBufferAttribute(offsets, 3, false)
-    );
-    bufferGeometry.addAttribute(
-      "angle",
-      new THREE.InstancedBufferAttribute(angles, 1, false)
-    );
-
-    this.particlesMesh = new THREE.Mesh(bufferGeometry, _particlesMat);
-
-    this.particlesMesh.position.z -= 270;
-
-    this.group.add(this.particlesMesh);
-  }
-
-  discard(texture, threshold) {
-    let numVisible = 0;
-    let originalColors = null;
-
-    const img = texture.image;
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-
-    canvas.width = this.width;
-    canvas.height = this.height;
-    ctx.scale(1, -1); // flip y
-    ctx.drawImage(img, 0, 0, this.width, this.height * -1);
-
-    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    originalColors = Float32Array.from(imgData.data);
-
-    for (var i = 0; i < this.numPoints; i++) {
-      if (originalColors[i * 4] > threshold) numVisible++;
-    }
-
-    return [numVisible, originalColors];
-  }
-
-  // Actualiza cualquier cambio, para luego representarlo en el canvas
-  update() {
-    this.renderer.setAnimationLoop(() => {
-      const time = this.clock.getElapsedTime() * 0.5;
-
-      //this.particlesMesh.material.uniforms.uTime.value = time;
-
-      if (this.resizeRendererToDisplaySize(this.renderer)) {
-        const canvas = this.renderer.domElement;
-        this.camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        this.camera.updateProjectionMatrix();
-      }
-      
-      this.positionMouse.update()
-
-      this.render();
-    });
-
-    requestAnimationFrame(this.update);
-  }
-
-  show(time = 1.0) {
-    TweenLite.fromTo(
-      this.particlesMesh.material.uniforms.uSize,
-      time,
-      { value: 0.5 },
-      { value: 1.5 }
-    );
-    TweenLite.to(this.particlesMesh.material.uniforms.uRandom, time, {
-      value: 2.0
-    });
-    TweenLite.fromTo(
-      this.particlesMesh.material.uniforms.uDepth,
-      time * 1.5,
-      { value: 40.0 },
-      { value: 4.0 }
-    );
-  }
-
-  // Rescala el canvas y escenario
-  resizeRendererToDisplaySize(renderer) {
-    const canvas = renderer.domElement;
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-      renderer.setSize(width, height, false);
-    }
-    return needResize;
-  }
-
-  // Renderiza nuestro escenario
-  render() {
-    this.renderer.render(this.scene, this.camera);
-  }
-}
-
-class TouchTexture {
-  constructor(parent) {
-    this.parent = parent;
-    this.size = 64;
-    this.maxAge = 120;
-    this.radius = 0.15;
-    this.trail = [];
-
-    this.initTexture();
-  }
-
-  initTexture() {
-    this.canvas = document.createElement("canvas");
-    this.canvas.width = this.size;
-    this.canvas.height = this.size;
-    
-    this.ctx = this.canvas.getContext("2d");
-    this.ctx.fillStyle = "white";
-    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-
-    this.texture = new THREE.Texture(this.canvas);
-
-    this.canvas.id = "touchTexture";
-  }
-
-  update(delta) {
-    this.clear();
-    // age points
-    this.trail.forEach((point, i) => {
-      point.age++;
-      // remove old
-      if (point.age > this.maxAge) {
-        this.trail.splice(i, 1);
-      }
-    });
-
-    this.trail.forEach((point, i) => {
-      this.drawTouch(point);
-    });
-
-    this.texture.needsUpdate = true;
-  }
-
-  clear() {
-    this.ctx.fillStyle = "black";
-    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-  }
-
-  addTouch(point) {
-    let force = 0;
-    const last = this.trail[this.trail.length - 1];
-
-    if (last) {
-      const dx = last.x - point.x;
-      const dy = last.y - point.y;
-      const dd = dx * dx + dy * dy;
-      force = Math.min(dd * 10000, 1);
-    }
-    this.trail.push({ x: point.x, y: point.y, age: 0, force });
-  }
-
-  drawTouch(point) {
-    const pos = {
-      x: point.x * this.size,
-      y: (1 - point.y) * this.size
-    };
-
-    let intensity = 1;
-    if (point.age < this.maxAge * 0.3) {
-      intensity = easeOutSine(point.age / (this.maxAge * 0.3), 0, 1, 1);
-    } else {
-      intensity = easeOutSine(
-        1 - (point.age - this.maxAge * 0.3) / (this.maxAge * 0.7),
-        0,
-        1,
-        1
+          if (
+            !/(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(
+              this.options.particleColor
+            )
+          )
+            return (
+              console.error(
+                "Please specify a valid particleColor hexadecimal color"
+              ),
+              !1
+            );
+          (this.canvas = document.createElement("canvas")),
+            this.i.appendChild(this.canvas),
+            (this.g = this.canvas.getContext("2d")),
+            (this.canvas.width = this.i.size.width),
+            (this.canvas.height = this.i.size.height),
+            this.l(this.i, { position: "relative" }),
+            this.l(this.canvas, { "z-index": "20", position: "relative" }),
+            window.addEventListener(
+              "resize",
+              function () {
+                return this.i.offsetWidth === this.i.size.width &&
+                  this.i.offsetHeight === this.i.size.height
+                  ? !1
+                  : ((this.canvas.width = this.i.size.width =
+                      this.i.offsetWidth),
+                    (this.canvas.height = this.i.size.height =
+                      this.i.offsetHeight),
+                    clearTimeout(this.m),
+                    void (this.m = setTimeout(
+                      function () {
+                        this.o = [];
+                        for (
+                          var a = 0;
+                          a <
+                          (this.canvas.width * this.canvas.height) /
+                            this.options.density;
+                          a++
+                        )
+                          this.o.push(new c(this));
+                        this.options.interactive && this.o.push(this.p),
+                          requestAnimationFrame(this.update.bind(this));
+                      }.bind(this),
+                      500
+                    )));
+              }.bind(this)
+            ),
+            (this.o = []);
+          for (
+            var a = 0;
+            a < (this.canvas.width * this.canvas.height) / this.options.density;
+            a++
+          )
+            this.o.push(new c(this));
+          this.options.interactive &&
+            ((this.p = new c(this)),
+            (this.p.velocity = { x: 0, y: 0 }),
+            this.o.push(this.p),
+            this.canvas.addEventListener(
+              "mousemove",
+              function (a) {
+                (this.p.x = a.clientX - this.canvas.offsetLeft),
+                  (this.p.y = a.clientY - this.canvas.offsetTop);
+              }.bind(this)
+            ),
+            this.canvas.addEventListener(
+              "mouseup",
+              function (a) {
+                (this.p.velocity = {
+                  x: (Math.random() - 0.5) * this.options.velocity,
+                  y: (Math.random() - 0.5) * this.options.velocity,
+                }),
+                  (this.p = new c(this)),
+                  (this.p.velocity = { x: 0, y: 0 }),
+                  this.o.push(this.p);
+              }.bind(this)
+            )),
+            requestAnimationFrame(this.update.bind(this));
+        }),
+        (b.prototype.update = function () {
+          this.g.clearRect(0, 0, this.canvas.width, this.canvas.height),
+            (this.g.globalAlpha = 1);
+          for (var a = 0; a < this.o.length; a++) {
+            this.o[a].update(), this.o[a].h();
+            for (var b = this.o.length - 1; b > a; b--) {
+              var c = Math.sqrt(
+                Math.pow(this.o[a].x - this.o[b].x, 2) +
+                  Math.pow(this.o[a].y - this.o[b].y, 2)
+              );
+              c > 120 ||
+                (this.g.beginPath(),
+                (this.g.strokeStyle = this.options.particleColor),
+                (this.g.globalAlpha = (120 - c) / 120),
+                (this.g.lineWidth = 0.7),
+                this.g.moveTo(this.o[a].x, this.o[a].y),
+                this.g.lineTo(this.o[b].x, this.o[b].y),
+                this.g.stroke());
+            }
+          }
+          0 !== this.options.velocity &&
+            requestAnimationFrame(this.update.bind(this));
+        }),
+        (b.prototype.setVelocity = function (a) {
+          return "fast" === a
+            ? 1
+            : "slow" === a
+            ? 0.33
+            : "none" === a
+            ? 0
+            : 0.66;
+        }),
+        (b.prototype.j = function (a) {
+          return "high" === a
+            ? 5e3
+            : "low" === a
+            ? 2e4
+            : isNaN(parseInt(a, 10))
+            ? 1e4
+            : a;
+        }),
+        (b.prototype.l = function (a, b) {
+          for (var c in b) a.style[c] = b[c];
+        }),
+        b
       );
-    }
+    });
 
-    intensity *= point.force;
+    // Initialisation
 
-    const radius = this.size * this.radius * intensity;
-
-    const grd = this.ctx.createRadialGradient(
-      pos.x,
-      pos.y,
-      radius * 0.25,
-      pos.x,
-      pos.y,
-      radius
-    );
-    grd.addColorStop(0, `rgba(255, 255, 255, 0.2)`);
-    grd.addColorStop(1, "rgba(0, 0, 0, 0.0)");
-
-    this.ctx.beginPath();
-    this.ctx.fillStyle = grd;
-    this.ctx.arc(pos.x, pos.y, radius, 0, Math.PI * 2);
-    this.ctx.fill();
-  }
-}
-
-const webgl = new WebGL();
-webgl.init();
-
-</script>
+    var canvasDiv = document.getElementById("particle-canvas");
+    var options = {
+      particleColor: "#888",
+      background:
+        "https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg",
+      interactive: true,
+      speed: "medium",
+      density: "high",
+    };
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
+  </script>
+</html>
