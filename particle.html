@@ -73,8 +73,8 @@
           (b = void 0 !== b ? b : {}),
           (this.options = {
             particleColor:
-              void 0 !== b.particleColor ? b.particleColor : "#fff",
-            background: void 0 !== b.background ? b.background : "#1a252f",
+              void 0 !== b.particleColor ? b.particleColor : "#111",
+            background: void 0 !== b.background ? b.background : "#000",
             interactive: void 0 !== b.interactive ? b.interactive : !0,
             velocity: this.setVelocity(b.speed),
             density: this.j(b.density),
@@ -241,8 +241,8 @@
 
   var canvasDiv = document.getElementById("particle-canvas");
   var options = {
-    particleColor: "#777",
-    background: "bg.jpg",
+    particleColor: "#ffffff",
+    color: "#000",
     interactive: true,
     speed: "slow",
     density: "minimum",
