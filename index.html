@@ -2,8 +2,8 @@
 <title>DimensionCloud</title>
 
 <head>
+
 <body>
-  <button id="deploy-wordpress"></button>
   <iframe id="particle" src="particle.html" style="
           position: fixed;
           top: 0;
@@ -17,20 +17,18 @@
           padding: 0;
           scroll-behavior: no;
           overflow: hidden;
-          z-index: 88888888;
+          z-index: -1;
         "></iframe>
+  <button id="deploy-wordpress" onclick="myFunction()">deploy</button>
+  </head>
 
-</head>
+  <style>
+  </style>
 
-<style>
-.deploy-wordpress { 
-  color : red;
-}
-
-
-</style>
-<script>
-
-</script>
+  <script>
+    function myFunction() {
+      alert("I am an alert box!");
+    }
+  </script>
 
 </html>
