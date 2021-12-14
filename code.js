@@ -1,15 +1,13 @@
+////////////////////////////////////////////////////////////////
+//////////////////////DIMENION CLOUD JAVA///////////////////////
+////////////////////////////////////////////////////////////////
+
+//NAVBAR FUNCTIONS CALLBACKS //////////////////////////////////
 function home() { window.location.replace("index.html"); }
+function projects() { window.location.replace("projects.html"); }
+function price() { window.location.replace("price.html"); }
+function aboutus() { window.location.replace("aboutus.html"); }
+function login() { window.location.replace("login.html"); }
+//NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
 
-if (document.getElementById("projects-tunel").style.display = "none") document.getElementById("projects-tunel").style.display = "flex"; else {window.location.replace("index.html");}
 
-  if (document.getElementById("price-tunel").style.display = "none") {
-    document.getElementById("price-tunel").style.display = "flex";
-  } else {window.location.replace("index.html");}
-
-  if (document.getElementById("aboutus-tunel").style.display = "none") {
-    document.getElementById("aboutus-tunel").style.display = "flex";
-  } else {window.location.replace("index.html");}
-
-  if (document.getElementById("login-tunel").style.display = "none") {
-    document.getElementById("login-tunel").style.display = "flex";
-  } else {window.location.replace("index.html");}
