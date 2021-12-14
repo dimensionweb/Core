@@ -1,12 +1,11 @@
 <html>
 <title>DimensionCloud</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="code.js"></script>
 
 <head>
 
 <body>
-
-  <div class="homebox"> <img src="bg.png" alt=""> </div>
 
   <iframe id="particle" src="particle.html" style="
           position: fixed;
@@ -24,62 +23,25 @@
           z-index: -1;
           opacity: 99%;
         "></iframe>
+
   <container id="navbar" class="navbar">
+
     <button class="button" onclick="home()">🏠 Home</button>
+
     <button class="button" onclick="projects()">💻 Projects</button>
+    <div id="projects-tunel" class="projects-tunel"></div>
+
     <button class="button" onclick="price()">💰 Price</button>
+    <div id="price-tunel" class="price-tunel"></div>
+
     <button class="button" onclick="aboutus()">👽 About us</button>
+    <div id="aboutus-tunel" class="aboutus-tunel"></div>
+
     <button class="button" onclick="login()">🔑 Login</button>
+    <div id="login-tunel" class="login-tunel"></div>
+
   </container>
 
   </head>
-
-
-  <style>
-    .navbar {
-      margin-left: auto;
-      margin-right: auto;
-      z-index: 1;
-    }
-
-    .button {
-      font-family: 'Courier New', Courier, monospace;
-      background-color: rgba(0, 0, 0, 0.055);
-      border: none;
-      color: rgb(255, 255, 255);
-      padding: 17px 36px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 17px;
-    }
-
-    .button:hover {
-      font-family: 'Courier New', Courier, monospace;
-      background-color: rgba(0, 0, 0, 0.849);
-      border: none;
-      color: rgb(255, 255, 255);
-      padding: 17px 36px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 17px;
-    }
-
-    .homebox {
-      display: block;
-      z-index: 2;
-      width: auto;
-      height: auto;
-    }
-  </style>
-
-  <script>
-    function home() { window.location.replace("index.html"); }
-    function projects() { alert("Projects button test ok!"); }
-    function price() { alert("Price button test ok!"); }
-    function aboutus() { alert("About us button test ok!"); }
-    function login() { alert("Login button test ok!"); }
-  </script>
 
 </html>

@@ -1,0 +1,65 @@
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+  }
+
+  .button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.055);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 17px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+  }
+
+  .button:hover {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.849);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 17px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+  }
+
+  .projects-tunel {
+    display: none;
+    padding: 600px 600px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.829);
+  }
+
+  .price-tunel {
+    display: none;
+    padding: 600px 600px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.829);
+  }
+
+  .aboutus-tunel {
+    display: none;
+    padding: 600px 600px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.829);
+  }
+
+  .login-tunel {
+    display: none;
+    padding: 600px 600px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.829);
+  }
