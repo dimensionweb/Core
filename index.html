@@ -19,15 +19,25 @@
           overflow: hidden;
           z-index: -1;
         "></iframe>
-  <button id="deploy-wordpress" onclick="myFunction()">deploy</button>
+  <button class="deploy-wordpress" onclick="deploy()">Deploy</button>
   </head>
 
   <style>
+    .deploy-wordpress {
+      background-color: rgb(255, 255, 255);
+      border: none;
+      color: rgb(0, 0, 0);
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
   </style>
 
   <script>
-    function myFunction() {
-      alert("I am an alert box!");
+    function deploy() {
+      alert("Deploy complete!");
     }
   </script>
 
