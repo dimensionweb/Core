@@ -1,11 +1,12 @@
 <html>
-<title>DimensionCloud</title>
+  <title>DimensionCloud</title>
 
-<head>
-
-<body>
-
-  <iframe id="particle" src="particle.html" style="
+  <head>
+    <body>
+      <iframe
+        id="particle"
+        src="particle.html"
+        style="
           position: fixed;
           top: 0;
           left: 0;
@@ -19,24 +20,34 @@
           scroll-behavior: no;
           overflow: hidden;
           z-index: -1;
-        "></iframe>
+        "
+      ></iframe>
 
+      <img
+        type="image"
+        id="dimension-logo"
+        class="center"
+        src="https://storage.googleapis.com/studio-design-assets/projects/rROnnAnYOA/s-197x115_2e203077-4443-49be-bb35-8c16b02c1bd4.gif"
+      />
+    </body>
+  </head>
 
-  <input type="image" id="dimension-logo"
-    src="https://storage.googleapis.com/studio-design-assets/projects/rROnnAnYOA/s-197x115_2e203077-4443-49be-bb35-8c16b02c1bd4.gif" />
+  <style>
+    .dimension-logo {
+      position: relative;
+      margin: center;
+      max-width: 10%;
+      max-height: 10%;
+      border: none;
+      z-index: 1;
+    }
 
-</body>
-</head>
-
-<style>
-  .dimension-logo {
-    position: relative;
-    margin: center;
-    max-width: 10%;
-    max-height: 10%;
-    border: none;
-    z-index: 1;
-  }
-</style>
-
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 350px;
+      width: 10%;
+    }
+  </style>
 </html>
