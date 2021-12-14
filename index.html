@@ -19,15 +19,24 @@
           overflow: hidden;
           z-index: -1;
         "></iframe>
-  <button class="deploy-wordpress" onclick="home()">Home</button>
-  <button class="deploy-wordpress" onclick="projects()">Projects</button>
-  <button class="deploy-wordpress" onclick="price()">Price</button>
-  <button class="deploy-wordpress" onclick="aboutus()">About us</button>
-  <button class="deploy-wordpress" onclick="login()">Login</button>
+  <div class="navbar">
+    <button class="button" onclick="home()">Home</button>
+    <button class="button" onclick="projects()">Projects</button>
+    <button class="button" onclick="price()">Price</button>
+    <button class="button" onclick="aboutus()">About us</button>
+    <button class="button" onclick="login()">Login</button>
+  </div>
+
   </head>
 
+
   <style>
-    .deploy-wordpress {
+    .navbar {
+      margin-bottom: auto;
+      margin-top: auto;
+    }
+
+    .button {
       background-color: rgb(0, 0, 0);
       border: none;
       color: rgb(255, 255, 255);
@@ -38,7 +47,7 @@
       font-size: 17px;
     }
 
-    .deploy-wordpress:hover {
+    .button:hover {
       background-color: rgb(0, 0, 0);
       border: none;
       color: rgb(0, 132, 255);
@@ -51,11 +60,11 @@
   </style>
 
   <script>
-    function home() {alert("Home button test ok!");}
-    function projects() {alert("Projects button test ok!");}
-    function price() {alert("Price button test ok!");}
-    function aboutus() {alert("About us button test ok!");}
-    function login() {alert("Login button test ok!");}
+    function home() { alert("Home button test ok!"); }
+    function projects() { alert("Projects button test ok!"); }
+    function price() { alert("Price button test ok!"); }
+    function aboutus() { alert("About us button test ok!"); }
+    function login() { alert("Login button test ok!"); }
   </script>
 
 </html>
