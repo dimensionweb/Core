@@ -27,38 +27,8 @@
     font-size: 17px;
   }
 
-  .projects-tunel {
-    display: none;
-    padding: 600px 600px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.829);
-  }
-
-  .price-tunel {
-    display: none;
-    padding: 600px 600px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.829);
-  }
-
-  .aboutus-tunel {
-    display: none;
-    padding: 600px 600px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.829);
-  }
-
-  .login-tunel {
-    display: none;
-    padding: 600px 600px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.829);
+  .portal {
+    display: flex;
+    border: 1px;
+    z-index: 8888888;
   }
