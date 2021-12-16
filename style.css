@@ -10,8 +10,11 @@
 
   .navbar {
     padding-left: 150px;
-    margin-top: 5px;
-    zoom: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    zoom: 70%;
     margin-bottom: 10px;
     position: absolute;
     z-index: 10;
