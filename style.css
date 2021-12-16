@@ -1,9 +1,16 @@
   .logo {
+   margin-right: auto;
+   margin-left: auto;
+   margin-bottom: auto;
+   margin-top: auto;
    zoom: 40%;
-   display: inline-block;
+   z-index: 2;
+   position: absolute;
    }
 
   .navbar {
+    padding-left: 150px;
+    margin-top: 5px;
     zoom: 60%;
     margin-bottom: 10px;
     position: absolute;
