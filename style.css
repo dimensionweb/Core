@@ -1,4 +1,11 @@
+  .logo {
+   zoom: 40%;
+   display: inline-block;
+   }
+
   .navbar {
+    zoom: 60%;
+    margin-bottom: 10px;
     position: flex;
     z-index: -1;
   }
