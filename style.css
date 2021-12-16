@@ -6,8 +6,8 @@
   .navbar {
     zoom: 60%;
     margin-bottom: 10px;
-    position: flex;
-    z-index: -1;
+    position: absolute;
+    z-index: 10;
   }
 
   .button {
