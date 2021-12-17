@@ -18,6 +18,9 @@
     margin-bottom: 10px;
     position: absolute;
     z-index: 10;
+  }
+
+  .button {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.055);
     border: none;
@@ -29,16 +32,7 @@
     font-size: 17px;
   }
 
-  .navbar:hover {
-    padding-left: 150px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-top: auto;
-    zoom: 70%;
-    margin-bottom: 10px;
-    position: absolute;
-    z-index: 10;
+  .button:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
     border: none;
