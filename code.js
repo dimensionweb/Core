@@ -8,7 +8,7 @@ function projects() { window.location.replace("projects.html"); }
 function price() { window.location.replace("price.html"); }
 function aboutus() { window.location.replace("aboutus.html"); }
 function login() { window.location.replace("https://gitpod.io/#https://github.com/dimensionweb/Core"); }
-function dimensioncloud-deploy() { window.location.replace("https://gitpod.io/#https://github.com/luizbills/gitpod-wordpress")}
+function CloudDeploy() { window.location.replace("https://gitpod.io/#https://github.com/luizbills/gitpod-wordpress"); }
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
 
 
