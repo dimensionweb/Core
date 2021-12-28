@@ -29,19 +29,19 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .button:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border: none;
+    border: 'rgb(0, 153, 255)', 1px solid ;
     color: rgb(255, 255, 255);
     padding: 17px 36px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .CloudDeploy {
@@ -53,23 +53,19 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    position: absolute;
-
+    font-size: 15px;
   }
 
   .CloudDeploy:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border: none;
+    border: 'rgb(0, 153, 255)', 1px solid ;
     color: rgb(255, 255, 255);
     padding: 17px 36px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    position: absolute;
-
+    font-size: 15px;
   }
 
   .portal {
