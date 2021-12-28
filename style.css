@@ -25,7 +25,7 @@
     background-color: rgba(0, 0, 0, 0.055);
     border: none;
     color: rgb(255, 255, 255);
-    padding: 17px 36px;
+    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -35,9 +35,10 @@
   .button:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border: 'rgb(0, 153, 255)', 1px solid ;
+    border-radius: 1px;
+    border: 2px solid #008cff;
     color: rgb(255, 255, 255);
-    padding: 17px 36px;
+    padding: 17px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -49,7 +50,7 @@
     background-color: rgba(0, 0, 0, 0.055);
     border: none;
     color: rgb(255, 255, 255);
-    padding: 17px 36px;
+    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -59,9 +60,10 @@
   .CloudDeploy:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border: 'rgb(0, 153, 255)', 1px solid ;
+    border-radius: 1px;
+    border: 2px solid #008cff;
     color: rgb(255, 255, 255);
-    padding: 17px 36px;
+    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
