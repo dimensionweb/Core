@@ -73,5 +73,13 @@
   .portal {
     display: flex;
     border: 1px;
-    z-index: 8888888;
+    z-index: 1;
   }
+
+  .terminal {
+    position: absolute;
+    padding-top: 100px;
+    width: 800px;
+    height: 700px;
+    z-index: 12;
+   }
