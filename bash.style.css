@@ -28,7 +28,7 @@ body {
   top: 2px;
 }
 .window {
-  color: #d6d6d6;
+  color: #000000;
   font-size: 14px;
   font-family: monospace;
   overflow-wrap: break-word;
@@ -70,10 +70,10 @@ code.out:before {
   background: #d6d6d6;
 }
 .green {
-  color: #a9d3ab;
+  color: #199400;
 }
 .red {
-  color: #f58e8e;
+  color: #00aeff;
 }
 .yellow {
   color: #fee08a;
