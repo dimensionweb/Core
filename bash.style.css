@@ -9,7 +9,7 @@ body {
   width: 600px;
   height: 400px;
   margin: auto auto;
-  background-color: #2d2d2d;
+  background-color: #00000057;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,13 +22,13 @@ body {
 .title {
   text-align: center;
   font-size: 0.75em;
-  color: #999;
+  color: rgb(255, 255, 255);
   height: 18px;
   position: relative;
   top: 2px;
 }
 .window {
-  color: #000000;
+  color: #ffffff;
   font-size: 14px;
   font-family: monospace;
   overflow-wrap: break-word;
