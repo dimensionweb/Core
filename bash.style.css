@@ -4,7 +4,6 @@
 /**********************/
 body {
   background-color: black;
-  display: block;
 }
 #terminal {
   width: 600px;
