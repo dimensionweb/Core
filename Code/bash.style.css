@@ -3,7 +3,7 @@
 /**** COLOR SCHEME ****/
 /**********************/
 body {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.644);
 }
 #terminal {
   width: 100%;
