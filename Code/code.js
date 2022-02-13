@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////
 
 //NAVBAR FUNCTIONS CALLBACKS //////////////////////////////////
-function home() { window.location.replace("https://dimensionweb.github.io/Core/"); }
+function home() { window.location.replace("./index.html"); }
 function projects() { window.location.replace("/Pages/projects.html"); }
 function price() { window.location.replace("/Pages/price.html"); }
 function aboutus() { window.location.replace("/Pages/aboutus.html"); }
