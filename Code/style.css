@@ -3,7 +3,8 @@
    margin-left: auto;
    margin-bottom: auto;
    margin-top: auto;
-   zoom: 40%;
+   width: 5Opx;
+   height: 50px;
    z-index: 2;
    position: absolute;
    }
@@ -14,8 +15,7 @@
     margin-left: auto;
     margin-bottom: auto;
     margin-top: auto;
-    zoom: 70%;
-    margin-bottom: 10px;
+    margin-bottom: auto;
     position: absolute;
     z-index: 10;
   }
@@ -25,7 +25,6 @@
     background-color: rgba(0, 0, 0, 0.055);
     border: none;
     color: rgb(255, 255, 255);
-    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -35,10 +34,7 @@
   .button:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border-radius: 1px;
-    border: 2px solid #008cff;
     color: rgb(255, 255, 255);
-    padding: 17px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -50,7 +46,6 @@
     background-color: rgba(0, 0, 0, 0.055);
     border: none;
     color: rgb(255, 255, 255);
-    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -60,26 +55,9 @@
   .CloudDeploy:hover {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgba(0, 0, 0, 0.849);
-    border-radius: 1px;
-    border: 2px solid #008cff;
     color: rgb(255, 255, 255);
-    padding: 18px 37px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
   }
-
-  .portal {
-    display: flex;
-    border: 1px;
-    z-index: 1;
-  }
-
-  .terminal {
-    position: absolute;
-    padding-top: 100px;
-    width: 800px;
-    height: 700px;
-    z-index: 12;
-   }
