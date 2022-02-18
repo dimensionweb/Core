@@ -12,9 +12,9 @@
   .navbar {
     padding-left: 150px;
     margin-right: auto;
-    margin-left: auto;
+    margin-left: -40px;
     margin-bottom: auto;
-    margin-top: auto;
+    margin-top: 15px;
     margin-bottom: auto;
     position: absolute;
     z-index: 10;
