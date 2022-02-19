@@ -13,10 +13,10 @@ margin-right: auto;
   position: absolute;
   width: 120px;
   height: 120px;
-  padding-top: 550px;
-  padding-bottom: auto;
-  padding-left: 150px;
-  padding-right: auto;
+  top: 550px;
+  bottom: auto;
+  left: 150px;
+  right: auto;
 
   animation-name: floatingmoon1;
   animation-duration: 3s;
