@@ -1,13 +1,10 @@
 .body {
   background: #161616;
-  vertical-align: bottom
 }
 
 .galaxy {
-  display: grid;  
-  grid-gap: 5px;  
-  grid-template-columns: repeat(auto-fit, 100px);
-  grid-template-rows: repeat(2, 100px);  
+  vertical-align: bottom
+  display: table-cell
 }
 
 .moon1 {
