@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="js/skrollr.js"></script>
+    <script src="js/_main.js"></script>
+
+    <title>Parallax</title>
+</head>
+
+
+<body>
+
+<!-- Slide 1 - Cloud image -->
+<section id="slide-1" class="homeSlide">
+    <div class="bcg" data-top="opacity: 1; width: 100%; height: 100%; top: 0%; left: 0%;" data-center="opacity: 0; width: 156%; height: 156%; top: -28%; left: -28%;" data-anchor-target="#slide-1"></div>
+    <div class="plaxEl" data-0p-top="opacity: 0" data-center="opacity: 1;" data-100p-top="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;" data--25p-bottom="opacity: 0;" data--20p-bottom="opacity: 1;" data-anchor-target="#slide-1">
+    </div>
+</section>
+
+<!-- Slide 2 - Road image -->
+<section id="slide-2" class="homeSlide" data-bottom="opacity: 0;" data--10p-bottom="opacity: 1;" data-anchor-target="#slide-1">
+    <div class="bcg" data-top="opacity: 1; width: 100%; height: 100%; top: 0%; left: 0%;" data-40p-bottom="opacity: 0; width: 196%; height: 196%; top: -48%; left: -48%;" data-anchor-target="#slide-2"></div>
+    <div class="plaxEl" data-top="opacity: 0; position: fixed; top: 206px; width: 100%; left: 0;" data-center="opacity: 1;" data-10p-bottom="opacity: 1;" data-bottom="opacity: 0;" data-anchor-target="#slide-2">
+    </div>
+</section>
+
+<!-- Slide 3 - Earth image -->
+<section id="slide-3" class="homeSlide" data-bottom-top="opacity: 0;" data-center="opacity: 1;" data-top="opacity: 1;" data-anchor-target="#slide-3">
+    <div class="bcg" data-top="opacity: 1; width: 120%; height: 120%; top: -10%; left: -10%;" data-center="opacity: 1; width: 110%; height: 110%; top: -5%; left: -5%;" data-bottom="opacity: 0; width: 100%; height: 100%; top: 0%; left: 0%;" data-anchor-target="#slide-3"></div>
+    <div class="plaxEl" data-top="opacity: 0; position: fixed; top: 206px; width: 100%; left: 0;" data-center="opacity: 0;" data-bottom="opacity: 1;" data-anchor-target="#slide-3">
+    </div>
+</section>
+</body>
+
+
+<style>
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+/* Slide 1 */
+.bcg {background-image:url('/Data/the.bg.png');}
+ 
+/* Slide 2 */
+#slide-2 .bcg {background-image:url('/Data/parallax/bg.noentity.png');}
+#slide-2 h2,
+#slide-3 h2  {color: #ffffff;}
+#slide-3 p,
+#slide-3 p {color: #b2b2b2;}
+ 
+/* Slide 3 */
+#slide-3 .bcg {background-image:url('/Data/parallax/bg.entity.png');}
+
+</style>
+
+<script>
+    var s = skrollr.init();
+</script>
+
+</html>
