@@ -7,6 +7,48 @@
   display: table-cell;
 }
 
+.solar {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: 50px;
+  bottom: auto;
+  left: auto;
+  right: 150px;
+  
+  animation-name: floatingsolar;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@-moz-keyframes spin {
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  to {transform:rotate(360deg);}
+}
+
+.spin {
+  animation: spin 1000ms linear infinite;
+}
+
+@keyframes floatingsolar {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -8px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+  
+}
+
 .moon1 {
   position: absolute;
   width: 120px;
