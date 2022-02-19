@@ -2,6 +2,13 @@
   background: #161616;
 }
 
+.galaxy {
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+}
+
 .moon1 {
   position: absolute;
   width: 120px;
