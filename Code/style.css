@@ -6,10 +6,10 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  margin-top: 550px;
-  margin-bottom: auto;
-  margin-left: 150px;
-  margin-right: auto;
+  padding-top: 550px;
+  padding-bottom: auto;
+  padding-left: 150px;
+  padding-right: auto;
 
   animation-name: floatingmoon1;
   animation-duration: 3s;
@@ -33,9 +33,9 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  margin-top: 550px;
-  margin-bottom: auto;
-  margin-left: auto;
+  top: 550px;
+  bottom: auto;
+  left: auto;
   right: 10px;
 
   animation-name: floatingmoon2;
@@ -60,10 +60,10 @@
   position: absolute;
   width: 250px;
   height: 250px;
-  margin-top: 570px;
-  margin-bottom: auto;
-  margin-left: 20px;
-  margin-right: auto;
+  top: 570px;
+  bottom: auto;
+  left: 20px;
+  right: auto;
 
   animation-name: floatingearth;
   animation-duration: 3s;
@@ -87,10 +87,10 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  margin-top: 530px;
-  margin-bottom: auto;
-  margin-left: 50px;
-  margin-right: auto;
+  top: 530px;
+  bottom: auto;
+  left: 50px;
+  right: auto;
 
   animation-name: floatingufo1;
   animation-duration: 3s;
@@ -114,10 +114,10 @@
   position: absolute;
   width: 150px;
   height: 150px;
-  margin-top: 530px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 70px;
+  top: 530px;
+  bottom: auto;
+  left: auto;
+  right: 50px;
 
   animation-name: floatingufo2;
   animation-duration: 3s;
@@ -141,10 +141,10 @@
   position: absolute;
   width: 400px;
   height: 400px;
-  margin-top: 500px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: -60px;
+  top: 500px;
+  bottom: auto;
+  left: auto;
+  right: -60px;
 
   animation-name: floatingsaturn;
   animation-duration: 3s;
@@ -176,7 +176,7 @@
 }
 
 .navbar {
-  margin-left: 150px;
+  padding-left: 150px;
   margin-right: auto;
   margin-left: -40px;
   margin-bottom: auto;
