@@ -14,7 +14,7 @@
     margin-right: auto;
     margin-left: -40px;
     margin-bottom: auto;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: auto;
     position: absolute;
     z-index: 10;
@@ -28,17 +28,17 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .button:hover {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(0, 0, 0, 0.849);
-    color: rgb(255, 255, 255);
+    border: none;
+    color: #00aeff;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .CloudDeploy {
@@ -49,15 +49,15 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .CloudDeploy:hover {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(0, 0, 0, 0.849);
-    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    color: #00aeff;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
   }
