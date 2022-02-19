@@ -9,8 +9,8 @@
 
 .solar {
   position: absolute;
-  width: 320px;
-  height: 320px;
+  width: 620px;
+  height: 620px;
   top: 50px;
   bottom: auto;
   left: auto;
@@ -20,20 +20,6 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-}
-
-@-moz-keyframes spin {
-  to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-  to {transform:rotate(360deg);}
-}
-
-.spin {
-  animation: spin 1000ms linear infinite;
 }
 
 @keyframes floatingsolar {
