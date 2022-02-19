@@ -1,12 +1,13 @@
 .body {
-  width: 100%;
-  height: auto;
   background: #161616;
 }
 
 .galaxy {
-  width: 100%;
-  height: auto;
+  @media (max-width: 660px){
+    .welcome.panel-widget-style {
+      margin-left: 20px !important;
+    }
+  }
 }
 
 .moon1 {
