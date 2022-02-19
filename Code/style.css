@@ -1,63 +1,229 @@
-  .logo {
-   margin-right: auto;
-   margin-left: auto;
-   margin-bottom: auto;
-   margin-top: auto;
-   width: 5Opx;
-   height: 50px;
-   z-index: 2;
-   position: absolute;
-   }
+.body {
+  background: #161616;
+}
 
-  .navbar {
-    padding-left: 150px;
-    margin-right: auto;
-    margin-left: -40px;
-    margin-bottom: auto;
-    margin-top: 10px;
-    margin-bottom: auto;
-    position: absolute;
-    z-index: 10;
-  }
+.moon1 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 550px;
+  bottom: auto;
+  left: 150px;
+  right: auto;
 
-  .button {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(0, 0, 0, 0.055);
-    border: none;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
-  }
+  animation-name: floatingmoon1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 
-  .button:hover {
-    font-family: 'Courier New', Courier, monospace;
-    border: none;
-    color: #00aeff;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
+@keyframes floatingmoon1 {
+  0% {
+    transform: translate(0, 0px);
   }
+  50% {
+    transform: translate(0, -8px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
 
-  .CloudDeploy {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(0, 0, 0, 0.055);
-    border: none;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
-  }
+.moon2 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 550px;
+  bottom: auto;
+  left: auto;
+  right: 10px;
 
-  .CloudDeploy:hover {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(0, 0, 0, 0);
-    color: #00aeff;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
+  animation-name: floatingmoon2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingmoon2 {
+  0% {
+    transform: translate(0, 0px);
   }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.earth {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 570px;
+  bottom: auto;
+  left: 20px;
+  right: auto;
+
+  animation-name: floatingearth;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingearth {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.ufo1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 530px;
+  bottom: auto;
+  left: 50px;
+  right: auto;
+
+  animation-name: floatingufo1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingufo1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-8px, 4px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.ufo2 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 530px;
+  bottom: auto;
+  left: auto;
+  right: 50px;
+
+  animation-name: floatingufo2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingufo2 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(-8px, 4px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.saturn {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 500px;
+  bottom: auto;
+  left: auto;
+  right: -60px;
+
+  animation-name: floatingsaturn;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingsaturn {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 10px;
+  margin-bottom: auto;
+  margin-top: 10px;
+  width: 5opx;
+  height: 50px;
+  z-index: 2;
+  position: absolute;
+}
+
+.navbar {
+  padding-left: 150px;
+  margin-right: auto;
+  margin-left: -40px;
+  margin-bottom: auto;
+  margin-top: 17px;
+  margin-bottom: auto;
+  position: absolute;
+  z-index: 10;
+}
+
+.button {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
+
+.button:hover {
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
+
+.CloudDeploy {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
+
+.CloudDeploy:hover {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+}
