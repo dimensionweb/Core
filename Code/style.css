@@ -2,24 +2,31 @@
   background: #161616;
 }
 
-.galaxy {
-  vertical-align: bottom;
-  display: table-cell;
-}
-
 .solar {
   position: absolute;
-  width: 620px;
-  height: 620px;
-  top: 50px;
-  bottom: auto;
+  top: 500px;
   left: auto;
-  right: 150px;
-  
-  animation-name: floatingsolar;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  right: 560px;
+  width: 220px;
+  height: 220px;
+  opacity: 10%;
+
+  -webkit-animation:spin 120s linear infinite;
+  -moz-animation:spin 120s linear infinite;
+  animation:spin 120s linear infinite;
+}
+
+@-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+  100% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
 }
 
 @keyframes floatingsolar {
@@ -43,9 +50,10 @@
   bottom: auto;
   left: 150px;
   right: auto;
+  opacity: 30%;
 
   animation-name: floatingmoon1;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -70,9 +78,10 @@
   bottom: auto;
   left: auto;
   right: 10px;
+  opacity: 30%;
 
   animation-name: floatingmoon2;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -97,9 +106,10 @@
   bottom: auto;
   left: 20px;
   right: auto;
+  opacity: 40%;
 
   animation-name: floatingearth;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -126,7 +136,7 @@
   right: auto;
 
   animation-name: floatingufo1;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -153,7 +163,7 @@
   right: 50px;
 
   animation-name: floatingufo2;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -178,9 +188,10 @@
   bottom: auto;
   left: auto;
   right: -60px;
+  opacity: 40%;
 
   animation-name: floatingsaturn;
-  animation-duration: 3s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }

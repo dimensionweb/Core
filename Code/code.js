@@ -11,4 +11,6 @@ function login() { window.location.replace("https://gitpod.io/workspaces"); }
 function CloudDeploy() { window.location.replace("/Pages/CloudDeploy.html"); }
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
 
+//SCROLLZOOM FUNCTIONS CALLBACKS /////////////////////////////
 
+//SCROLLZOOM FUNCTIONS CALLBACKS /////////////////////////////
