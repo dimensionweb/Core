@@ -208,6 +208,34 @@
   }
 }
 
+.neptune {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: -60px;
+  opacity: 40%;
+
+  animation-name: floatingneptune;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floatingneptune {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
 .logo {
   margin-right: auto;
   margin-left: 10px;
