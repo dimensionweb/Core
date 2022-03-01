@@ -247,7 +247,7 @@
   margin-right: auto;
   margin-left: 10px;
   margin-bottom: auto;
-  margin-top: 10px;
+  margin-top: 25px;
   height: 50px;
   z-index: 2;
   position: absolute;
@@ -258,13 +258,13 @@
   margin-right: auto;
   margin-left: -40px;
   margin-bottom: auto;
-  margin-top: 17px;
+  margin-top: 23px;
   margin-bottom: auto;
   position: absolute;
   z-index: 10;
 }
 
-.button {
+.nav-Home {
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
@@ -273,9 +273,11 @@
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+  width: 55px;
+  height: 55px;
 }
 
-.button:hover {
+.nav-Home:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
   color: #00aeff;
@@ -283,6 +285,108 @@
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Projects {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Projects:hover {
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Price {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Price:hover {
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Aboutus {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Aboutus:hover {
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Login {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #161616;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
+}
+
+.nav-Login:hover {
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  color: #00aeff;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  width: 55px;
+  height: 55px;
 }
 
 .CloudDeploy {
@@ -294,6 +398,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+  width: 55px;
+  height: 55px;
 }
 
 .CloudDeploy:hover {
@@ -304,4 +410,6 @@
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+  width: 55px;
+  height: 55px;
 }
