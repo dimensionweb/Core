@@ -6,3 +6,11 @@ cls
 
 
 :boot
+echo CREATE WEBSITE ?
+pause
+cd /workspace/Core/Dimension
+docker-compose up
+pause
+echo STOP WEBSITE ?
+docker-compose down
+goto boot
