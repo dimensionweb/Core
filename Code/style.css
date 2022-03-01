@@ -2,7 +2,7 @@
   html body {
       height: 100%;
       background: #161616;
-  } }
+  }
 
 .solar {
   position: absolute;
@@ -300,4 +300,5 @@
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
+}
 }
