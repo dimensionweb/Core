@@ -8,8 +8,8 @@ cls
 :boot
 echo CREATE WEBSITE ?
 pause
-cd /workspace/Core/Dimension
-docker-compose up
+cd /workspace/Core/SERVER
+docker run wordpress
 pause
 echo STOP WEBSITE ?
 docker-compose down
