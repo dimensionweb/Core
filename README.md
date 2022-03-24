@@ -1,5 +1,5 @@
 DimensionCloud
 Hosting for websites & APPS ♡
 
-💻 app: https://dimensionweb.github.io/Core
+💻 app: https://dimension.codes
 ☕ https://www.buymeacoffee.com/DimensionStudio
