@@ -5,45 +5,33 @@
 //NAVBAR FUNCTIONS CALLBACKS //////////////////////////////////
 function home() {
   window.location.replace("https://dimension.codes/");
+  wait(1000);
+  document.getElementById("nav-Home").style.opacity = "1";
 }
 function projects() {
   window.location.replace("/Pages/projects.html");
+  wait(1000);
+  document.getElementById("nav-Projects").style.opacity = "1";
 }
 function price() {
   window.location.replace("/Pages/price.html");
+  wait(1000);
+  document.getElementById("nav-Price").style.opacity = "1";
 }
 function aboutus() {
   window.location.replace("/Pages/aboutus.html");
+  wait(1000);
+  document.getElementById("nav-Aboutus").style.opacity = "1";
 }
 function login() {
   window.location.replace("https://gitpod.io/workspaces");
+  wait(1000);
+  document.getElementById("nav-Login").style.opacity = "1";
+  
 }
 function CloudDeploy() {
   window.location.replace("/Pages/CloudDeploy.html");
+  wait(1000);
+  document.getElementById("CloudDeploy").style.opacity = "1";
 }
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
-
-
-//PORTAL FUNCTIONS CALLBACKS END /////////////////////////////
-window.onload = addListeners;
-
-function addListeners() {
-  document.getElementById('portal').addEventListener('mousedown', mouseDown, false);
-  window.addEventListener('mouseup', mouseUp, false);
-}
-
-function mouseUp() {
-  window.removeEventListener('mousemove', divMove, true);
-}
-
-function mouseDown(e) {
-  window.addEventListener('mousemove', divMove, true);
-}
-
-function divMove(e) {
-  var div = document.getElementById('portal');
-  div.style.position = 'absolute';
-  div.style.top = e.clientY + 'px';
-  div.style.left = e.clientX + 'px';
-}
-//PORTAL FUNCTIONS CALLBACKS END /////////////////////////////

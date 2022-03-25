@@ -9,7 +9,7 @@
   right: 200px;
   width: 220px;
   height: 220px;
-  opacity: 10%;
+  opacity: 0.1;
 
   -webkit-animation: spin 120s linear infinite;
   -moz-animation: spin 120s linear infinite;
@@ -53,7 +53,7 @@
   bottom: auto;
   left: 150px;
   right: auto;
-  opacity: 30%;
+  opacity: 0.1;
 
   animation-name: floatingmoon1;
   animation-duration: 8s;
@@ -81,7 +81,7 @@
   bottom: auto;
   left: auto;
   right: 10px;
-  opacity: 30%;
+  opacity: 0.1;
 
   animation-name: floatingmoon2;
   animation-duration: 8s;
@@ -109,7 +109,7 @@
   bottom: auto;
   left: 20px;
   right: auto;
-  opacity: 40%;
+  opacity: 0.1;
 
   animation-name: floatingearth;
   animation-duration: 8s;
@@ -191,7 +191,7 @@
   bottom: auto;
   left: auto;
   right: -60px;
-  opacity: 40%;
+  opacity: 0.1;
 
   animation-name: floatingsaturn;
   animation-duration: 8s;
@@ -219,7 +219,7 @@
   bottom: auto;
   left: auto;
   right: -60px;
-  opacity: 40%;
+  opacity: 0.1;
 
   animation-name: floatingneptune;
   animation-duration: 8s;
@@ -247,7 +247,7 @@
   bottom: auto;
   left: auto;
   right: 110px;
-  opacity: 5%;
+  opacity: 0.1;
   z-index: -99999;
 
   animation-name: floatingcomet;
@@ -293,7 +293,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -305,7 +305,7 @@
 .nav-Home:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -318,7 +318,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -330,7 +330,7 @@
 .nav-Projects:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -343,7 +343,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -355,7 +355,7 @@
 .nav-Price:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -368,7 +368,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -380,7 +380,7 @@
 .nav-Aboutus:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -393,7 +393,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -405,7 +405,7 @@
 .nav-Login:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 100%;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -418,7 +418,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  opacity: 50%;
+  opacity: 0.5;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -430,7 +430,8 @@
 .CloudDeploy:hover {
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
-  opacity: 100%;
+  border: none;
+  opacity: 1;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -509,5 +510,5 @@
   bottom: auto;
   left: 20px;
   right: auto;
-  opacity: 100%;
+  opacity: 1;
 }
