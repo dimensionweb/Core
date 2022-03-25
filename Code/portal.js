@@ -22,18 +22,22 @@ function divMove(e) {
 }
 
 function CloseScreen() {
-  document.getElementById("portal").style.opacity= "0";
+  document.getElementById("portal").style.visibility = "hidden";
+  document.getElementById("menuClose").style.visibility = "hidden";
+  document.getElementById("menuHide").style.visibility = "hidden";
+  document.getElementById("menuZoom").style.visibility = "hidden";
+  document.getElementById("menuZoomReset").style.visibility = "hidden";
 }
 
 function FullScreen() {
-  document.getElementById("menuZoom").style.opacity = "0";
-  document.getElementById("menuZoomreset").style.opacity = "1";
+  document.getElementById("menuZoom").style.visibility = "hidden";
+  document.getElementById("menuZoomReset").style.visibility = "visible";
   document.getElementById("portal").style.zoom = "200%";
 }
 
 function ResetScreen() {
-  document.getElementById("menuZoomreset").style.opacity= "0";
-  document.getElementById("menuZoom").style.opacity = "1";
+  document.getElementById("menuZoomReset").style.visibility = "hidden";
+  document.getElementById("menuZoom").style.visibility = "visible";
   document.getElementById("portal").style.zoom = "100%";
 }
 //PORTAL FUNCTIONS CALLBACKS END /////////////////////////////

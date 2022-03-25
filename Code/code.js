@@ -20,8 +20,14 @@ function login() {
 
 }
 function CloudDeploy() {
-  if (window.location.href.indexOf("CloudDeploy") != -1) { document.getElementById("portal").style.opacity= "1";}
+  if (window.location.href.indexOf("CloudDeploy") != -1) {
+    document.getElementById("portal").style.visibility = "visible";
+    document.getElementById("menuClose").style.visibility = "visible";
+    document.getElementById("menuHide").style.visibility = "visible";
+    document.getElementById("menuZoom").style.visibility = "visible";
+  }
   else
-  window.location.replace("/Pages/CloudDeploy.html");
+    window.location.replace("/Pages/CloudDeploy.html");
 }
+
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
