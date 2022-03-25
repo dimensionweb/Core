@@ -27,7 +27,7 @@ function FullScreen() {
   document.getElementById("menuZoom").style.visibility = "hidden";
 }
 
-function menuZoomReset() {
+function ResetScreen() {
   document.getElementById("portal").style.zoom = "100%";
   document.getElementById("menuZoomReset").style.visibility = "hidden";
   document.getElementById("menuZoom").style.visibility = "block";
