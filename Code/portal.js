@@ -16,8 +16,20 @@ function mouseDown(e) {
 
 function divMove(e) {
   var div = document.getElementById('portal');
-  div.style.position = 'absolute';
+  div.style.position = 'relative';
   div.style.top = e.clientY + 'px';
   div.style.left = e.clientX + 'px';
+}
+
+function FullScreen() {
+  document.getElementById("portal").style.zoom = "200%";
+  document.getElementById("menuZoomReset").style.visibility = "block";
+  document.getElementById("menuZoom").style.visibility = "hidden";
+}
+
+function menuZoomReset() {
+  document.getElementById("portal").style.zoom = "100%";
+  document.getElementById("menuZoomReset").style.visibility = "hidden";
+  document.getElementById("menuZoom").style.visibility = "block";
 }
 //PORTAL FUNCTIONS CALLBACKS END /////////////////////////////

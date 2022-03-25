@@ -1,5 +1,5 @@
 .body {
-  background: #161616;
+  background: #111111;
 }
 
 .solar {
@@ -471,6 +471,18 @@
   background: rgba(38, 255, 0, 0.705);
 }
 
+.menuZoomReset {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 12px;
+  margin-bottom: auto;
+  margin-left: 556px;
+  margin-right: auto;
+  background: rgb(238, 255, 0);
+  visibility: hidden;
+}
+
 .portal {
   position: relative;
   width: 600px;
@@ -485,7 +497,6 @@
 }
 
 .brain {
-  position: absolute;
   width: 150px;
   height: 150px;
   top: 100px;
@@ -496,7 +507,6 @@
 }
 
 .brain:hover {
-  position: absolute;
   width: 150px;
   height: 150px;
   top: 100px;
