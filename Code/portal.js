@@ -4,6 +4,7 @@ window.onload = addPortal;
 function addPortal() {
   document.getElementById('portal').addEventListener('mousedown', mouseDown, false);
   window.addEventListener('mouseup', mouseUp, false);
+  document.getElementById("menuZoomreset").style.opacity = "0";
 }
 
 function mouseUp() {
@@ -22,14 +23,14 @@ function divMove(e) {
 }
 
 function FullScreen() {
+  document.getElementById("menuZoom").style.opacity = "0";
+  document.getElementById("menuZoomreset").style.opacity = "1";
   document.getElementById("portal").style.zoom = "200%";
-  document.getElementById("menuZoom").style.visibility = "hidden";
-  document.getElementById("menuZoomReset").style.visibility = "block";
 }
 
 function ResetScreen() {
+  document.getElementById("menuZoomreset").style.opacity= "0";
+  document.getElementById("menuZoom").style.opacity = "1";
   document.getElementById("portal").style.zoom = "100%";
-  document.getElementById("menuZoomReset").style.visibility = "hidden";
-  document.getElementById("menuZoom").style.visibility = "block";
 }
 //PORTAL FUNCTIONS CALLBACKS END /////////////////////////////
