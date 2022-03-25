@@ -500,7 +500,7 @@
   height: 150px;
   top: 100px;
   bottom: auto;
-  left: 20px;
+  left: 100px;
   right: auto;
   opacity: 70%;
 }
@@ -510,7 +510,47 @@
   height: 150px;
   top: 100px;
   bottom: auto;
-  left: 20px;
+  left: 100px;
+  right: auto;
+  opacity: 1;
+}
+
+.test-tube {
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 150px;
+  right: auto;
+  opacity: 70%;
+}
+
+.test-tube:hover {
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 150px;
+  right: auto;
+  opacity: 1;
+}
+
+.rocket {
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 200px;
+  right: auto;
+  opacity: 70%;
+}
+
+.rocket:hover {
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 200px;
   right: auto;
   opacity: 1;
 }
