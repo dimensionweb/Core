@@ -292,7 +292,7 @@
 .nav-Home {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -316,7 +316,7 @@
 .nav-Projects {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -340,7 +340,7 @@
 .nav-Price {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -364,7 +364,7 @@
 .nav-Aboutus {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -388,7 +388,7 @@
 .nav-Login {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -412,7 +412,7 @@
 .CloudDeploy {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  opacity: 0.5;
+  opacity: 0.3;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -495,62 +495,71 @@
   border: 0.01rem solid rgba(0, 0, 0, 0.185);
 }
 
+.deploy-status {
+  margin-top: 100px;
+  margin-left: 120px;
+}
+
 .brain {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 100px;
-  right: auto;
-  opacity: 70%;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
 }
 
 .brain:hover {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 100px;
-  right: auto;
-  opacity: 1;
+  width: 120px;
+  height: 120px;
 }
 
 .test-tube {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 150px;
-  right: auto;
-  opacity: 70%;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
 }
 
 .test-tube:hover {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 150px;
-  right: auto;
-  opacity: 1;
+  width: 120px;
+  height: 120px;
 }
 
 .rocket {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 200px;
-  right: auto;
-  opacity: 70%;
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
 }
 
 .rocket:hover {
-  width: 150px;
-  height: 150px;
-  top: 100px;
-  bottom: auto;
-  left: 200px;
-  right: auto;
-  opacity: 1;
+  width: 120px;
+  height: 120px;
+}
+
+.stack-image-upload>input {
+  display: none;
+}
+
+.plus {
+  width: 70px;
+  height: 70px;
+  margin-left: 142px;
+}
+
+#show-code {
+  overflow-y: auto;
+  margin-left: 10px;
+  max-height: 200px;
+  max-width: 580px;
+  width: 100%;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(0, 98, 255);
+}
+
+.error {
+  overflow-y: auto;
+  margin-left: 10px;
+  max-height: 200px;
+  width: 100%;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(255, 0, 0);
 }
