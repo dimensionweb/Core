@@ -6,7 +6,7 @@
   position: absolute;
   top: 400px;
   left: auto;
-  right: 260px;
+  right: 200px;
   width: 220px;
   height: 220px;
   opacity: 10%;
@@ -247,7 +247,8 @@
   bottom: auto;
   left: auto;
   right: 110px;
-  opacity: 40%;
+  opacity: 5%;
+  z-index: -99999;
 
   animation-name: floatingcomet;
   animation-duration: 8s;
@@ -292,7 +293,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -304,7 +305,7 @@
 .nav-Home:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -317,7 +318,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -329,7 +330,7 @@
 .nav-Projects:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -342,7 +343,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -354,7 +355,7 @@
 .nav-Price:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -367,7 +368,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -379,7 +380,7 @@
 .nav-Aboutus:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -392,7 +393,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -404,7 +405,7 @@
 .nav-Login:hover {
   font-family: "Courier New", Courier, monospace;
   border: none;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -417,7 +418,7 @@
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
   border: none;
-  color: rgb(255, 255, 255);
+  opacity: 50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -429,7 +430,7 @@
 .CloudDeploy:hover {
   font-family: "Courier New", Courier, monospace;
   background-color: #161616;
-  color: #00aeff;
+  opacity: 100%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -438,6 +439,75 @@
   height: 65px;
 }
 
-.pipeline {
-  
+.menuBase {
+  border-radius: 50%;
+  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.menuClose {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 12px;
+  margin-bottom: auto;
+  margin-left: 580px;
+  margin-right: auto;
+  background: rgba(255, 0, 0, 0.705);
+}
+
+.menuHide {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 12px;
+  margin-bottom: auto;
+  margin-left: 568px;
+  margin-right: auto;
+  background: rgba(0, 140, 255, 0.705);
+}
+
+.menuZoom {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 12px;
+  margin-bottom: auto;
+  margin-left: 556px;
+  margin-right: auto;
+  background: rgba(38, 255, 0, 0.705);
+}
+
+.portal {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  top: 150px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #00000098;
+  border-radius: 0.8rem;
+  border: 0.01rem solid rgba(0, 0, 0, 0.185);
+}
+
+.brain {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 20px;
+  right: auto;
+  opacity: 70%;
+}
+
+.brain:hover {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 100px;
+  bottom: auto;
+  left: 20px;
+  right: auto;
+  opacity: 100%;
 }
