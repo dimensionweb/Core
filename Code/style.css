@@ -291,7 +291,6 @@
 
 .nav-Home {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -316,7 +315,6 @@
 
 .nav-Projects {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -341,7 +339,6 @@
 
 .nav-Price {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -366,7 +363,6 @@
 
 .nav-Aboutus {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -391,7 +387,6 @@
 
 .nav-Login {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -416,7 +411,6 @@
 
 .CloudDeploy {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 0.5;
   text-align: center;
@@ -429,7 +423,6 @@
 
 .CloudDeploy:hover {
   font-family: "Courier New", Courier, monospace;
-  background-color: #161616;
   border: none;
   opacity: 1;
   text-align: center;
