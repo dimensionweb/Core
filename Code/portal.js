@@ -23,8 +23,8 @@ function divMove(e) {
 
 function FullScreen() {
   document.getElementById("portal").style.zoom = "200%";
-  document.getElementById("menuZoomReset").style.visibility = "block";
   document.getElementById("menuZoom").style.visibility = "hidden";
+  document.getElementById("menuZoomReset").style.visibility = "block";
 }
 
 function ResetScreen() {
