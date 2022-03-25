@@ -4,7 +4,6 @@ window.onload = addPortal;
 function addPortal() {
   document.getElementById('portal').addEventListener('mousedown', mouseDown, false);
   window.addEventListener('mouseup', mouseUp, false);
-  document.getElementById("menuZoomreset").style.opacity = "0";
 }
 
 function mouseUp() {
@@ -20,6 +19,10 @@ function divMove(e) {
   div.style.position = 'relative';
   div.style.top = e.clientY + 'px';
   div.style.left = e.clientX + 'px';
+}
+
+function CloseScreen() {
+  document.getElementById("portal").style.opacity= "0";
 }
 
 function FullScreen() {

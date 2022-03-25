@@ -5,6 +5,7 @@
 <script src="/Code/code.js"></script>
 <script src="/Code/portal.js"></script>
 <script>window.addEventListener('load', (event) => { document.getElementById("CloudDeploy").style.opacity = "1"; });</script>
+<script>window.addEventListener('load', (event) => { document.getElementById("menuZoomreset").style.opacity = "0"; });</script>
 <img id="logo" class="logo" onclick="home()" src="/Data/logo.gif" alt="">
 
 
@@ -37,7 +38,7 @@
   <div id="portal" class="portal">
 
     <div id="portal-menu" class="portal-menu">
-      <div id="menuClose" class="menuBase menuClose" onclick="home()"></div>
+      <div id="menuClose" class="menuBase menuClose" onclick="CloseScreen()"></div>
       <div id="menuHide" class="menuBase menuHide"></div>
       <div id="menuZoom" class="menuBase menuZoom" onclick="FullScreen()"></div>
       <div id="menuZoomreset" class="menuBase menuZoomreset" onclick="ResetScreen()"></div>

@@ -20,6 +20,8 @@ function login() {
 
 }
 function CloudDeploy() {
+  if (window.location.href.indexOf("CloudDeploy") != -1) { document.getElementById("portal").style.opacity= "1";}
+  else
   window.location.replace("/Pages/CloudDeploy.html");
 }
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
