@@ -39,13 +39,12 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
     var file = document.querySelector('input[type=file]').files[0];
     var reader = new FileReader()
 
-    var DockerComposer = /application.*/;
+    var DockerCompose = /application.*/;
 
-    if (file.type.match(DockerComposer)) {
+    if (file.type.match(DockerCompose)) {
       reader.onload = function (event) {
         preview.innerHTML = event.target.result;
         document.getElementById("brain").style.opacity = "1";
-        document.getElementById("plus").style.visibility = "hidden";
       }
     } else {
       preview.innerHTML = "<span class='WrongFormat_ERROR'>DimensionCloud can only deploy .yml [ docker-compose ]</span>";
@@ -61,4 +60,13 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
   wait(1);
   window.location.replace("/Pages/CloudDeploy.html");
 }
- //DEPLOY SERVER //////////////////////////////////////////////
+//DEPLOY SERVER //////////////////////////////////////////////
+
+
+//InLabCloudDeploy ///////////////////////////////////////////
+var DockerCompose = document.body.appendChild(document.createElement("DockerCompose"));
+DockerCompose.download = "docker-compose.yml";
+DockerCompose.href = document.getElementById("show-code").innerHTML;
+DockerCompose.innerHTML = "[DockerCompose]";
+document.getElementById("brain").style.opacity = "0.5";
+//InLabCloudDeploy ///////////////////////////////////////////
