@@ -33,6 +33,9 @@ function FullScreen() {
   document.getElementById("menuZoom").style.visibility = "hidden";
   document.getElementById("menuZoomReset").style.visibility = "visible";
   document.getElementById("portal").style.zoom = "200%";
+  document.getElementById("menuClose").style.zoom = "100%";
+  document.getElementById("menuHide").style.zoom = "100%";
+  document.getElementById("menuZoom").style.zoom = "100%";
 }
 
 function ResetScreen() {

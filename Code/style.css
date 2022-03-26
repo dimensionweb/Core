@@ -554,7 +554,7 @@
   color: rgb(0, 98, 255);
 }
 
-.error {
+.WrongFormat_ERROR {
   overflow-y: auto;
   margin-left: 10px;
   max-height: 200px;
