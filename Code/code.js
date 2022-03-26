@@ -39,16 +39,16 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
     var file = document.querySelector('input[type=file]').files[0];
     var reader = new FileReader()
 
-    var textFile = /text.*/;
+    var DockerComposer = /application.*/;
 
-    if (file.type.match(textFile)) {
+    if (file.type.match(DockerComposer)) {
       reader.onload = function (event) {
         preview.innerHTML = event.target.result;
         document.getElementById("brain").style.opacity = "1";
         document.getElementById("plus").style.visibility = "hidden";
       }
     } else {
-      preview.innerHTML = "<span class='error'>DimensionCloud can only deploy .txt [ docker-compose ]</span>";
+      preview.innerHTML = "<span class='WrongFormat_ERROR'>DimensionCloud can only deploy .yml [ docker-compose ]</span>";
       document.getElementById("brain").style.opacity = "0.1";
       wait(1);
       window.location.replace("/Pages/CloudDeploy.html");
