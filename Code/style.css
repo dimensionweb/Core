@@ -624,3 +624,9 @@
   left: -400px;
 }
 
+.iFrameit {
+  margin-top: 30px;
+  width: 600px;
+  height: 370px;
+  border-radius: 0.8rem;
+}

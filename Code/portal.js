@@ -2,7 +2,6 @@
 window.addEventListener("load", (event) => {
   dragElement(document.getElementById("DeployPortal1"));
   dragElement(document.getElementById("DeployPortal2"));
-  dragElement(document.getElementById("DeployPortal3"));
 
   function dragElement(elmnt) {
     var pos1 = 0,
