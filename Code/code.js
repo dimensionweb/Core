@@ -44,7 +44,7 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
       reader.onload = function (event) {
         preview.innerHTML = event.target.result;
         var BrainStyle = document.getElementById("brain");
-        BrainStyle.setAttribute("style", "height: 600px");
+        BrainStyle.setAttribute("style", "opacity: 1");
       };
     } else {
       preview.innerHTML =
