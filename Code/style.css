@@ -435,60 +435,79 @@
 
 .menuBase {
   border-radius: 50%;
-  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+  width: 10px;
+  height: 10px;
 }
 
 .menuClose {
   position: absolute;
-  width: 8px;
-  height: 8px;
   top: 12px;
   margin-bottom: auto;
   margin-left: 580px;
   margin-right: auto;
-  background: rgba(255, 0, 0, 0.705);
-}
-
-.menuHide {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  top: 12px;
-  margin-bottom: auto;
-  margin-left: 568px;
-  margin-right: auto;
-  background: rgba(0, 140, 255, 0.705);
+  background: rgb(255, 0, 0);
 }
 
 .menuZoom {
   position: absolute;
-  width: 8px;
-  height: 8px;
   top: 12px;
   margin-bottom: auto;
-  margin-left: 556px;
+  margin-left: 560px;
   margin-right: auto;
-  background: rgba(38, 255, 0, 0.705);
+  background: rgb(0, 68, 255);
 }
 
 .menuZoomReset {
   position: absolute;
-  width: 8px;
-  height: 8px;
   top: 12px;
   margin-bottom: auto;
-  margin-left: 556px;
+  margin-left: 560px;
   margin-right: auto;
-  background: rgb(238, 255, 0);
+  background: rgb(132, 0, 255);
 }
 
-.portal {
-  position: relative;
+.menuClose2 {
+  position: absolute;
+  top: 5px;
+  margin-bottom: auto;
+  margin-left: 22px;
+  margin-right: auto;
+  background: rgb(255, 0, 0);
+}
+
+.BasePortal {
+  position: absolute;
   width: 600px;
   height: 400px;
-  top: 150px;
+  top: 200px;
+  left: 420px;
   margin-bottom: auto;
-  margin-left: auto;
+  margin-right: auto;
+  background-color: #00000098;
+  border-radius: 0.8rem;
+  border: 0.01rem solid rgba(0, 0, 0, 0.185);
+}
+
+.DeployPortal1 {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  top: 200px;
+  left: 420px;
+  margin-bottom: auto;
+  margin-right: auto;
+  background-color: #00000098;
+  border-radius: 0.8rem;
+  border: 0.01rem solid rgba(0, 0, 0, 0.185);
+}
+
+.DeployPortal2 {
+  position: absolute;
+  width: 50px;
+  height: 400px;
+  top: 400px;
+  left: 120px;
+  margin-bottom: auto;
   margin-right: auto;
   background-color: #00000098;
   border-radius: 0.8rem;
@@ -503,7 +522,7 @@
 .brain {
   width: 120px;
   height: 120px;
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 .brain:hover {
@@ -514,7 +533,7 @@
 .test-tube {
   width: 120px;
   height: 120px;
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 .test-tube:hover {
@@ -525,7 +544,7 @@
 .rocket {
   width: 120px;
   height: 120px;
-  opacity: 0.6;
+  opacity: 0.2;
 }
 
 .rocket:hover {
@@ -533,7 +552,7 @@
   height: 120px;
 }
 
-.stack-image-upload>input {
+.stack-image-upload > input {
   display: none;
 }
 
@@ -550,7 +569,7 @@
   max-width: 580px;
   width: 100%;
   font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: rgb(0, 98, 255);
 }
 
@@ -560,6 +579,48 @@
   max-height: 200px;
   width: 100%;
   font-size: 12px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: rgb(255, 0, 0);
 }
+
+.PortalBoxArea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.move {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: -15px;
+}
+
+.resize {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  left: -15px;
+}
+
+.meter {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 200px;
+  left: -15px;
+}
+
+.color {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 300px;
+  left: -15px;
+}
+
+.portal-menu2 {
+  left: -400px;
+}
+

@@ -2,6 +2,10 @@
 //////////////////////DIMENION CLOUD JAVA///////////////////////
 ////////////////////////////////////////////////////////////////
 
+//ONLOAD JAVA START ////////////////////////////////////////////
+
+//ONLOAD JAVA END //////////////////////////////////////////////
+
 //NAVBAR FUNCTIONS CALLBACKS //////////////////////////////////
 function home() {
   window.location.replace("https://dimension.codes/");
@@ -17,37 +21,34 @@ function aboutus() {
 }
 function login() {
   window.location.replace("https://gitpod.io/workspaces");
-
 }
 function CloudDeploy() {
   if (window.location.href.indexOf("CloudDeploy") != -1) {
-    document.getElementById("portal").style.visibility = "visible";
+    document.getElementById("DeployPortal1").style.visibility = "visible";
     document.getElementById("menuClose").style.visibility = "visible";
-    document.getElementById("menuHide").style.visibility = "visible";
     document.getElementById("menuZoom").style.visibility = "visible";
-  }
-  else
-    window.location.replace("/Pages/CloudDeploy.html");
+  } else window.location.replace("/Pages/CloudDeploy.html");
 }
-
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////
 
 //DEPLOY SERVER //////////////////////////////////////////////
 if (window.File && window.FileReader && window.FileList && window.Blob) {
   function UploadImage() {
-    var preview = document.getElementById('show-code');
-    var file = document.querySelector('input[type=file]').files[0];
-    var reader = new FileReader()
+    var preview = document.getElementById("show-code");
+    var file = document.querySelector("input[type=file]").files[0];
+    var reader = new FileReader();
 
     var DockerCompose = /application.*/;
 
     if (file.type.match(DockerCompose)) {
       reader.onload = function (event) {
         preview.innerHTML = event.target.result;
-        document.getElementById("brain").style.opacity = "1";
-      }
+        var BrainStyle = document.getElementById("brain");
+        BrainStyle.setAttribute("style", "height: 600px");
+      };
     } else {
-      preview.innerHTML = "<span class='WrongFormat_ERROR'>DimensionCloud can only deploy .yml [ docker-compose ]</span>";
+      preview.innerHTML =
+        "<span class='WrongFormat_ERROR'>DimensionCloud can only deploy .yml [ docker-compose ]</span>";
       document.getElementById("brain").style.opacity = "0.1";
       wait(1);
       window.location.replace("/Pages/CloudDeploy.html");
@@ -62,11 +63,6 @@ if (window.File && window.FileReader && window.FileList && window.Blob) {
 }
 //DEPLOY SERVER //////////////////////////////////////////////
 
-
 //InLabCloudDeploy ///////////////////////////////////////////
-var DockerCompose = document.body.appendChild(document.createElement("DockerCompose"));
-DockerCompose.download = "docker-compose.yml";
-DockerCompose.href = document.getElementById("show-code").innerHTML;
-DockerCompose.innerHTML = "[DockerCompose]";
-document.getElementById("brain").style.opacity = "0.5";
+
 //InLabCloudDeploy ///////////////////////////////////////////
