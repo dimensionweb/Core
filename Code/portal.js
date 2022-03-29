@@ -50,7 +50,19 @@ function CloseScreen() {
 
 function CloseScreen2() {
   document.getElementById("DeployPortal2").style.visibility = "hidden";
-  document.getElementById("menuClose2").style.visibility = "hidden";
+  document.getElementById("color-menu").style.visibility = "hidden";
+}
+
+function OpenColorMenu() {
+  if ((document.getElementById("color-menu").style.visibility = "hidden")) {
+    document.getElementById("color-menu").style.visibility = "visible";
+    document.getElementById("color").style.opacity = "1";
+  } else if (
+    (document.getElementById("color-menu").style.visibility = "visible")
+  ) {
+    var CloseMenuColor = document.getElementById("menu-color");
+  CloseMenuColor.setAttribute("style", "visbility: hidden");
+  }
 }
 
 function FullScreen() {
@@ -60,7 +72,6 @@ function FullScreen() {
   DeployPortalStyle.setAttribute("style", "height: 600px");
   var iFrameitStyle = document.getElementById("iFrameit");
   iFrameitStyle.setAttribute("style", "height: 570px");
-
 }
 
 function ResetScreen() {
