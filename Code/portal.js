@@ -58,6 +58,9 @@ function FullScreen() {
   document.getElementById("menuZoomReset").style.visibility = "visible";
   var DeployPortalStyle = document.getElementById("DeployPortal1");
   DeployPortalStyle.setAttribute("style", "height: 600px");
+  var iFrameitStyle = document.getElementById("iFrameit");
+  iFrameitStyle.setAttribute("style", "height: 570px");
+
 }
 
 function ResetScreen() {
@@ -65,5 +68,7 @@ function ResetScreen() {
   document.getElementById("menuZoom").style.visibility = "visible";
   var DeployPortalStyle = document.getElementById("DeployPortal1");
   DeployPortalStyle.setAttribute("style", "height: 400px");
+  var iFrameitStyle = document.getElementById("iFrameit");
+  iFrameitStyle.setAttribute("style", "height: 400px");
 }
 //DeployPortal MENU FUNCTIONS END /////////////////////////////

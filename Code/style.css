@@ -2,6 +2,10 @@
   background: #111111;
 }
 
+.dontselectme {
+  -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+}
+
 .solar {
   position: absolute;
   top: 400px;
@@ -628,5 +632,6 @@
   margin-top: 30px;
   width: 600px;
   height: 370px;
-  border-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
 }
