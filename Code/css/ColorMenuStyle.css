@@ -144,18 +144,30 @@
   
   .picker {
     border-radius: 50%;
-    background: radial-gradient(#000000,#2f2f2f);
     width: 85px;
     height: 85px;
     margin-top: 8px;
     margin-left: 90px;
+    background: radial-gradient(black, #ffffff, white);
+    border: 0.1px solid #00000080;
   }
 
   .picker-inside {
     border-radius: 50%;
     background: white;
+    border: 0.1px solid #00000044;
     width: 20px;
     height: 20px;
-    margin-top: -52px;
+    margin-top: -54px;
     margin-left: 123px;
+  }
+
+  .picker-selector {
+    position: absolute;
+    border-radius: 50%;
+    border: 0.1px solid #00000044;
+    width: 8px;
+    height: 8px;
+    margin-top: -16px;
+    margin-left: 129px;
   }
