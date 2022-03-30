@@ -144,9 +144,18 @@
   
   .picker {
     border-radius: 50%;
-    background: radial-gradient(red, blue);
+    background: radial-gradient(#000000,#2f2f2f);
     width: 85px;
     height: 85px;
     margin-top: 8px;
     margin-left: 90px;
+  }
+
+  .picker-inside {
+    border-radius: 50%;
+    background: white;
+    width: 20px;
+    height: 20px;
+    margin-top: -52px;
+    margin-left: 123px;
   }

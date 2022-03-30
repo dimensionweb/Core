@@ -89,5 +89,84 @@ function ResetScreen() {
 //DeployPortal MENU FUNCTIONS END /////////////////////////////
 
 //LiquidPicker START /////////////////////////////////////////////
-
+function SetColorVar1() {
+  document.getElementById("picker-inside").style.backgroundColor = "#93c572";
+  document.getElementById("picker").style.background = "radial-gradient(#93c572, #000)";
+}
+function SetColorVar2() {
+  document.getElementById("picker-inside").style.backgroundColor = "#fc6600";
+  document.getElementById("picker").style.background = "radial-gradient(#fc6600, #000)";
+}
+function SetColorVar3() {
+  document.getElementById("picker-inside").style.backgroundColor = "#CDB0EE";
+  document.getElementById("picker").style.background = "radial-gradient(#CDB0EE, #000)";
+}
+function SetColorVar4() {
+  document.getElementById("picker-inside").style.backgroundColor = "#010101";
+  document.getElementById("picker").style.background = "radial-gradient(#010101, #000)";
+}
+function SetColorVar5() {
+  document.getElementById("picker-inside").style.backgroundColor = "#25523b";
+  document.getElementById("picker").style.background = "radial-gradient(#25523b, #000)";
+}
+function SetColorVar6() {
+  document.getElementById("picker-inside").style.backgroundColor = "#b53737";
+  document.getElementById("picker").style.background = "radial-gradient(#b53737, #000)";
+}
+function SetColorVar7() {
+  document.getElementById("picker-inside").style.backgroundColor = "#5F3D68";
+  document.getElementById("picker").style.background = "radial-gradient(#5F3D68, #000)";
+}
+function SetColorVar8() {
+  document.getElementById("picker-inside").style.backgroundColor = "#4A4A4A";
+  document.getElementById("picker").style.background = "radial-gradient(#4A4A4A, #000)";
+}
+function SetColorVar9() {
+  document.getElementById("picker-inside").style.backgroundColor = "#fdfd96";
+  document.getElementById("picker").style.background = "radial-gradient(#fdfd96, #000)";
+}
+function SetColorVar10() {
+  document.getElementById("picker-inside").style.backgroundColor = "#00ff37";
+  document.getElementById("picker").style.background = "radial-gradient(#00ff37, #000)";
+}
+function SetColorVar11() {
+  document.getElementById("picker-inside").style.backgroundColor = "#730f0f";
+  document.getElementById("picker").style.background = "radial-gradient(#730f0f, #000)";
+}
+function SetColorVar12() {
+  document.getElementById("picker-inside").style.backgroundColor = "#0e0e0e";
+  document.getElementById("picker").style.background = "radial-gradient(#0e0e0e, #000)";
+}
+function SetColorVar13() {
+  document.getElementById("picker-inside").style.backgroundColor = "#006ee6";
+  document.getElementById("picker").style.background = "radial-gradient(#006ee6, #000)";
+}
+function SetColorVar14() {
+  document.getElementById("picker-inside").style.backgroundColor = "#F4C2C2";
+  document.getElementById("picker").style.background = "radial-gradient(#F4C2C2, #000)";
+}
+function SetColorVar15() {
+  document.getElementById("picker-inside").style.backgroundColor = "#fbff00";
+  document.getElementById("picker").style.background = "radial-gradient(#fbff00, #000)";
+}
+function SetColorVar16() {
+  document.getElementById("picker-inside").style.backgroundColor = "#ffffff";
+  document.getElementById("picker").style.background = "radial-gradient(#ffffff, #000)";
+}
+function SetColorVar17() {
+  document.getElementById("picker-inside").style.backgroundColor = "#ffb480";
+  document.getElementById("picker").style.background = "radial-gradient(#ffb480, #000)";
+}
+function SetColorVar18() {
+  document.getElementById("picker-inside").style.backgroundColor = "#E11584";
+  document.getElementById("picker").style.background = "radial-gradient(#E11584, #000)";
+}
+function SetColorVar19() {
+  document.getElementById("picker-inside").style.backgroundColor = "#00254d";
+  document.getElementById("picker").style.background = "radial-gradient(#00254d, #000)";
+}
+function SetColorVar20() {
+  document.getElementById("picker-inside").style.backgroundColor = "#452813";
+  document.getElementById("picker").style.background = "radial-gradient(#452813, #000)";
+}
 //LiquidPicker END /////////////////////////////////////////////
