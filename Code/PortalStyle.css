@@ -80,6 +80,19 @@
     border: 0.01rem solid rgba(0, 0, 0, 0.185);
   }
   
+  .DeployPortal3 {
+    position: absolute;
+    width: 400px;
+    height: 50px;
+    top: 186px;
+    left: 12px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #000000ee;
+    border-radius: 0.8rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+
   .deploy-status {
     margin-top: 100px;
     margin-left: 120px;
