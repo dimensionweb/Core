@@ -1,8 +1,20 @@
 //DeployPortal MOVE FUNCTIONS START //////////////////////////////
 window.addEventListener("load", (event) => {
+  //CloudDeploy
   dragElement(document.getElementById("DeployPortal1"));
+  //ColorPicker
   dragElement(document.getElementById("DeployPortal2"));
   dragElement(document.getElementById("picker-selector"));
+  //Galaxy
+  dragElement(document.getElementById("moon1"));
+  dragElement(document.getElementById("moon2"));
+  dragElement(document.getElementById("earth"));
+  dragElement(document.getElementById("ufo1"));
+  dragElement(document.getElementById("ufo2"));
+  dragElement(document.getElementById("saturn"));
+  dragElement(document.getElementById("solar"));
+  dragElement(document.getElementById("neptune"));
+  dragElement(document.getElementById("comet"));
 
   function dragElement(elmnt) {
     var pos1 = 0,
