@@ -76,6 +76,7 @@
       <img id="resize" class="resize" src="/Data/icons/webp/resize.webp" draggable="false">
       <img id="meter" class="meter" src="/Data/icons/webp/meter.webp" draggable="false">
       <img id="color-button" class="color-button" src="/Data/icons/color.png" draggable="false" onclick="OpenColorMenu()">
+      <img id="color-buttonClose" class="color-button" src="/Data/icons/color.png" draggable="false" onclick="CloseScreen3()">
     </div>
 
     <div id="color-menu" class="color-menu">
@@ -101,14 +102,11 @@
       <div id="color-var20" class="color-varbase color-var20" onclick="SetColorVar20()"></div>
       <div id="picker" class="picker"></div>
       <div id="picker-inside" class="picker-inside"></div>
-      <div id="DeployPortal3" class="picker-selector DeployPortal3"></div>
     </div>
-
-    <div id="color-menu" class="color-menu">
-      
-    </div>
-
+    
   </div>
+
+  <canvas id="picker-selector" class="picker-selector"></canvas>
 
 </body>
 </head>

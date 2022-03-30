@@ -6,7 +6,7 @@ function SetColorVar1() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #93c572, black)";
+  const HueMix = "radial-gradient(#ffffff04, #93c572, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar2() {
@@ -16,7 +16,7 @@ function SetColorVar2() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #fc6600, black)";
+  const HueMix = "radial-gradient(#ffffff04, #fc6600, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar3() {
@@ -26,7 +26,7 @@ function SetColorVar3() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #CDB0EE, black)";
+  const HueMix = "radial-gradient(#ffffff04, #CDB0EE, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar4() {
@@ -36,7 +36,7 @@ function SetColorVar4() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #010101, black)";
+  const HueMix = "radial-gradient(#ffffff04, #010101, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar5() {
@@ -46,7 +46,7 @@ function SetColorVar5() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #25523b, black)";
+  const HueMix = "radial-gradient(#ffffff04, #25523b, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar6() {
@@ -56,7 +56,7 @@ function SetColorVar6() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #b53737, black)";
+  const HueMix = "radial-gradient(#ffffff04, #b53737, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar7() {
@@ -66,7 +66,7 @@ function SetColorVar7() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #5F3D68, black)";
+  const HueMix = "radial-gradient(#ffffff04, #5F3D68, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar8() {
@@ -76,7 +76,7 @@ function SetColorVar8() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #4A4A4A, black)";
+  const HueMix = "radial-gradient(#ffffff04, #4A4A4A, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar9() {
@@ -86,7 +86,7 @@ function SetColorVar9() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #fdfd96, black)";
+  const HueMix = "radial-gradient(#ffffff04, #fdfd96, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar10() {
@@ -96,7 +96,7 @@ function SetColorVar10() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #00ff37, black)";
+  const HueMix = "radial-gradient(#ffffff04, #00ff37, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar11() {
@@ -106,7 +106,7 @@ function SetColorVar11() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #730f0f, black)";
+  const HueMix = "radial-gradient(#ffffff04, #730f0f, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar12() {
@@ -116,7 +116,7 @@ function SetColorVar12() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #0e0e0e, black)";
+  const HueMix = "radial-gradient(#ffffff04, #0e0e0e, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar13() {
@@ -126,7 +126,7 @@ function SetColorVar13() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #006ee6, black)";
+  const HueMix = "radial-gradient(#ffffff04, #006ee6, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar14() {
@@ -136,7 +136,7 @@ function SetColorVar14() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #F4C2C2, black)";
+  const HueMix = "radial-gradient(#ffffff04, #F4C2C2, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar15() {
@@ -146,7 +146,7 @@ function SetColorVar15() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #fbff00, black)";
+  const HueMix = "radial-gradient(#ffffff04, #fbff00, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar16() {
@@ -156,7 +156,7 @@ function SetColorVar16() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(black, #ffffff, #ffffff59)";
+  const HueMix = "radial-gradient(black, #ffffff, white)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar17() {
@@ -166,7 +166,7 @@ function SetColorVar17() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #ffb480, black)";
+  const HueMix = "radial-gradient(#ffffff04, #ffb480, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar18() {
@@ -176,7 +176,7 @@ function SetColorVar18() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #E11584, black)";
+  const HueMix = "radial-gradient(#ffffff04, #E11584, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar19() {
@@ -186,7 +186,7 @@ function SetColorVar19() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #00254d, black)";
+  const HueMix = "radial-gradient(#ffffff04, #00254d, black)";
   HueColor.style.background = HueMix;
 }
 function SetColorVar20() {
@@ -196,7 +196,7 @@ function SetColorVar20() {
   SetColor.style.backgroundColor = ColorStyle.backgroundColor;
 
   const HueColor = document.getElementById("picker");
-  const HueMix = "radial-gradient(#ffffff59, #452813, black)";
+  const HueMix = "radial-gradient(#ffffff04, #452813, black)";
   HueColor.style.background = HueMix;
 }
 //LiquidPicker END /////////////////////////////////////////////

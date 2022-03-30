@@ -168,6 +168,7 @@
     border: 0.1px solid #00000044;
     width: 8px;
     height: 8px;
-    margin-top: -16px;
-    margin-left: 129px;
+    top: 524px; 
+    left: 193px;
+    visibility: hidden;
   }
