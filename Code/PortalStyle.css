@@ -40,6 +40,15 @@
     margin-right: auto;
     background: rgb(255, 0, 0);
   }
+
+  .menuClose3 {
+    position: absolute;
+    top: 18px;
+    margin-bottom: auto;
+    margin-left: 380px;
+    margin-right: auto;
+    background: rgb(255, 0, 0);
+  }
   
   .BasePortal {
     position: absolute;
@@ -80,17 +89,23 @@
     border: 0.01rem solid rgba(0, 0, 0, 0.185);
   }
   
-  .DeployPortal3 {
+  .ConsoleInfo {
     position: absolute;
     width: 400px;
     height: 50px;
-    top: 186px;
-    left: 12px;
-    margin-bottom: auto;
-    margin-right: auto;
+    top: 90%;
+    left: 71%;
     background-color: #000000ee;
     border-radius: 0.8rem;
     border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+
+  .ConsoleLabel {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: 5%;
+    font-family: "Courier New", Courier, monospace;
+    color: azure;
   }
 
   .deploy-status {

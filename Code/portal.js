@@ -53,6 +53,10 @@ function CloseScreen2() {
   document.getElementById("color-menu").style.visibility = "hidden";
 }
 
+function CloseScreen3() {
+  document.getElementById("DeployPortal3").style.visibility = "hidden";
+}
+
 function OpenColorMenu() {
   if ((document.getElementById("color-menu").style.visibility = "hidden")) {
     document.getElementById("color-menu").style.visibility = "visible";
