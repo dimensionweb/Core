@@ -1,0 +1,204 @@
+
+.menuBase {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .menuClose {
+    position: absolute;
+    top: 12px;
+    margin-bottom: auto;
+    margin-left: 580px;
+    margin-right: auto;
+    background: rgb(255, 0, 0);
+  }
+  
+  .menuZoom {
+    position: absolute;
+    top: 12px;
+    margin-bottom: auto;
+    margin-left: 560px;
+    margin-right: auto;
+    background: rgb(0, 68, 255);
+  }
+  
+  .menuZoomReset {
+    position: absolute;
+    top: 12px;
+    margin-bottom: auto;
+    margin-left: 560px;
+    margin-right: auto;
+    background: rgb(132, 0, 255);
+  }
+  
+  .menuClose2 {
+    position: absolute;
+    top: 5px;
+    margin-bottom: auto;
+    margin-left: 22px;
+    margin-right: auto;
+    background: rgb(255, 0, 0);
+  }
+  
+  .BasePortal {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 200px;
+    left: 420px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #00000098;
+    border-radius: 0.8rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+  
+  .DeployPortal1 {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 181px;
+    left: 438px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #000000ee;
+    border-radius: 0.8rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+  
+  .DeployPortal2 {
+    position: absolute;
+    width: 50px;
+    height: 400px;
+    top: 186px;
+    left: 12px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #000000ee;
+    border-radius: 0.8rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+  
+  .deploy-status {
+    margin-top: 100px;
+    margin-left: 120px;
+  }
+  
+  .brain {
+    width: 120px;
+    height: 120px;
+    opacity: 0.2;
+  }
+  
+  .brain:hover {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .test-tube {
+    width: 120px;
+    height: 120px;
+    opacity: 0.2;
+  }
+  
+  .test-tube:hover {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .rocket {
+    width: 120px;
+    height: 120px;
+    opacity: 0.2;
+  }
+  
+  .rocket:hover {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .stack-image-upload > input {
+    display: none;
+  }
+  
+  .plus {
+    width: 70px;
+    height: 70px;
+    margin-left: 142px;
+  }
+  
+  #show-code {
+    overflow-y: auto;
+    margin-left: 10px;
+    max-height: 200px;
+    max-width: 580px;
+    width: 100%;
+    font-size: 12px;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(0, 98, 255);
+  }
+  
+  .WrongFormat_ERROR {
+    overflow-y: auto;
+    margin-left: 10px;
+    max-height: 200px;
+    width: 100%;
+    font-size: 12px;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(255, 0, 0);
+  }
+  
+  .PortalBoxArea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .move {
+    position: absolute;
+    opacity: 0.4;
+    width: 80px;
+    height: 80px;
+    left: -15px;
+    top: 20px;
+  }
+  
+  .resize {
+    position: absolute;
+    opacity: 0.4;
+    width: 80px;
+    height: 80px;
+    top: 100px;
+    left: -15px;
+  }
+  
+  .meter {
+    position: absolute;
+    opacity: 0.4;
+    width: 80px;
+    height: 80px;
+    top: 200px;
+    left: -15px;
+  }
+  
+  .color-button {
+    position: absolute;
+    opacity: 0.4;
+    width: 80px;
+    height: 80px;
+    top: 300px;
+    left: -15px;
+  }
+  
+  .portal-menu2 {
+    left: -400px;
+  }
+  
+  .iFrameit {
+    margin-top: 30px;
+    width: 600px;
+    height: 370px;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+  }

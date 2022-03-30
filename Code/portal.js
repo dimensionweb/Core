@@ -56,12 +56,12 @@ function CloseScreen2() {
 function OpenColorMenu() {
   if ((document.getElementById("color-menu").style.visibility = "hidden")) {
     document.getElementById("color-menu").style.visibility = "visible";
-    document.getElementById("color").style.opacity = "1";
+    document.getElementById("color-button").style.opacity = "1";
   } else if (
     (document.getElementById("color-menu").style.visibility = "visible")
   ) {
-    var CloseMenuColor = document.getElementById("menu-color");
-  CloseMenuColor.setAttribute("style", "visbility: hidden");
+    var CloseMenuColor = document.getElementById("color-menu");
+    CloseMenuColor.setAttribute("style", "visbility: hidden");
   }
 }
 
@@ -83,3 +83,7 @@ function ResetScreen() {
   iFrameitStyle.setAttribute("style", "height: 400px");
 }
 //DeployPortal MENU FUNCTIONS END /////////////////////////////
+
+//LiquidPicker START /////////////////////////////////////////////
+
+//LiquidPicker END /////////////////////////////////////////////

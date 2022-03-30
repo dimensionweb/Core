@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <title>DimensionCloud</title>
 <link rel="stylesheet" href="/Code/style.css">
-<link rel="icon" href="/Data/icons/webp/moon.webp">
+<link rel="stylesheet" href="/Code/MenuStyle.css">
+<link rel="stylesheet" href="/Code/ColorMenuStyle.css">
+<link rel="stylesheet" href="/Code/PortalStyle.css">
+<link rel="stylesheet" href="/Code/GalaxyStyle.css">
+<link rel="favicon" href="/Data/icons/favicon.ico">
 <script src="/Code/code.js"></script>
 <script src="/Code/portal.js"></script>
 <script>window.addEventListener('load', (event) => { document.getElementById("CloudDeploy").style.opacity = "1"; });</script>
 <script>window.addEventListener('load', (event) => { document.getElementById("menuZoomReset").style.visibility = "hidden"; });</script>
 <img id="logo" class="logo" onclick="home()" src="/Data/logo.gif">
-
 
 <head>
 
@@ -69,38 +72,31 @@
       <img id="move" class="move" src="/Data/icons/webp/move.webp" draggable="false">
       <img id="resize" class="resize" src="/Data/icons/webp/resize.webp" draggable="false">
       <img id="meter" class="meter" src="/Data/icons/webp/meter.webp" draggable="false">
-      <img id="color" class="color" src="/Data/icons/color.png" draggable="false" onclick="OpenColorMenu()">
+      <img id="color-button" class="color-button" src="/Data/icons/color.png" draggable="false" onclick="OpenColorMenu()">
     </div>
 
     <div id="color-menu" class="color-menu">
-      <div id="color-var1" class="color-var1"></div>
-      <div id="color-var2" class="color-var2"></div>
-      <div id="color-var3" class="color-var3"></div>
-      <div id="color-var4" class="color-var4"></div>
-      <div id="color-var5" class="color-var5"></div>
-      <div id="color-var6" class="color-var6"></div>
-      <div id="color-var7" class="color-var7"></div>
-      <div id="color-var8" class="color-var8"></div>
-      <div id="color-var9" class="color-var9"></div>
-      <div id="color-var10" class="color-var10"></div>
-      <div id="color-var11" class="color-var11"></div>
-      <div id="color-var12" class="color-var12"></div>
-      <div id="color-var13" class="color-var13"></div>
-      <div id="color-var14" class="color-var14"></div>
-      <div id="color-var15" class="color-var15"></div>
-      <div id="color-var16" class="color-var16"></div>
-      <div id="color-var17" class="color-var17"></div>
-      <div id="color-var18" class="color-var18"></div>
-      <div id="color-var19" class="color-var19"></div>
-      <div id="color-var20" class="color-var20"></div>
-      <div id="color-var21" class="color-var21"></div>
-      <div id="color-var22" class="color-var22"></div>
-      <div id="color-var23" class="color-var23"></div>
-      <div id="color-var24" class="color-var24"></div>
-      <div id="color-var25" class="color-var25"></div>
-      <div id="color-var26" class="color-var26"></div>
-      <div id="color-var27" class="color-var27"></div>
-      <div id="color-pick" class="color-pick"></div>
+      <div id="color-var1" class="color-varbase color-var1"></div>
+      <div id="color-var2" class="color-varbase color-var2"></div>
+      <div id="color-var3" class="color-varbase color-var3"></div>
+      <div id="color-var4" class="color-varbase color-var4"></div>
+      <div id="color-var5" class="color-varbase color-var5"></div>
+      <div id="color-var6" class="color-varbase color-var6"></div>
+      <div id="color-var7" class="color-varbase color-var7"></div>
+      <div id="color-var8" class="color-varbase color-var8"></div>
+      <div id="color-var9" class="color-varbase color-var9"></div>
+      <div id="color-var10" class="color-varbase color-var10"></div>
+      <div id="color-var11" class="color-varbase color-var11"></div>
+      <div id="color-var12" class="color-varbase color-var12"></div>
+      <div id="color-var13" class="color-varbase color-var13"></div>
+      <div id="color-var14" class="color-varbase color-var14"></div>
+      <div id="color-var15" class="color-varbase color-var15"></div>
+      <div id="color-var16" class="color-varbase color-var16"></div>
+      <div id="color-var17" class="color-varbase color-var17"></div>
+      <div id="color-var18" class="color-varbase color-var18"></div>
+      <div id="color-var19" class="color-varbase color-var19"></div>
+      <div id="color-var20" class="color-varbase color-var20"></div>
+      <div id="picker" class="picker"></div>
     </div>
 
     <div id="color-menu" class="color-menu">

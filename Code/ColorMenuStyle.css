@@ -1,0 +1,152 @@
+.color-menu {
+    position: absolute;
+    visibility: hidden;
+    width: 185px;
+    height: 100px;
+    top: 290px;
+    left: 51px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #1a1a1aeb;
+    border-top-right-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+  }
+  
+  .color-varbase {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .color-var1 {
+    background: #93c572;
+    top: 15px;
+    left: 10px;
+  }
+  
+  .color-var2 {
+    background: #fc6600;
+    top: 35px;
+    left: 10px;
+  }
+  
+  .color-var3 {
+    background: #CDB0EE;
+    top: 55px;
+    left: 10px;
+  }
+  
+  .color-var4 {
+    background: #010101;
+    top: 75px;
+    left: 10px;
+  }
+  
+  .color-var5 {
+    background: #25523b;
+    top: 15px;
+    left: 25px;
+  }
+  
+  .color-var6 {
+    background: #b53737;
+    top: 35px;
+    left: 25px;
+  }
+  
+  .color-var7 {
+    background: #5F3D68;
+    top: 55px;
+    left: 25px;
+  }
+  
+  .color-var8 {
+    background: #4A4A4A;
+    top: 75px;
+    left: 25px;
+  }
+  
+  .color-var9 {
+    background: #fdfd96;
+    top: 15px;
+    left: 40px;
+  }
+  
+  
+  .color-var10 {
+    background: #00ff37;
+    top: 55px;
+    left: 40px;
+  }
+  
+  .color-var11 {
+    background: #730f0f;
+    top: 35px;
+    left: 40px;
+  }
+  
+  
+  .color-var12 {
+    background: #0e0e0e;
+    top: 75px;
+    left: 40px;
+  }
+  
+  .color-var13 {
+    background: #006ee6;
+    top: 55px;
+    left: 55px;
+  }
+  
+  .color-var14 {
+    background: #F4C2C2;
+    top: 35px;
+    left: 55px;
+  }
+  
+  .color-var15 {
+    background: #fbff00;
+    top: 15px;
+    left: 55px;
+  }
+  
+  
+  .color-var16 {
+    background: #ffffff;
+    top: 75px;
+    left: 55px;
+  }
+  
+  .color-var17 {
+    background: #ffb480;
+    top: 15px;
+    left: 70px;
+  }
+  
+  .color-var18 {
+    background: #E11584;
+    top: 35px;
+    left: 70px;
+  }
+  
+  .color-var19 {
+    background: #00254d;
+    top: 55px;
+    left: 70px;
+  }
+  
+  .color-var20 {
+    background: #452813;
+    top: 75px;
+    left: 70px;
+  }
+  
+  .picker {
+    border-radius: 50%;
+    background-color: #0e0e0e;
+    width: 85px;
+    height: 85px;
+    margin-top: 8px;
+    margin-left: 90px;
+  }

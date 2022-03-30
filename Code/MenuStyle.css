@@ -1,0 +1,155 @@
+
+.navbar {
+    padding-left: 150px;
+    margin-right: auto;
+    margin-left: -40px;
+    margin-bottom: auto;
+    margin-top: 23px;
+    margin-bottom: auto;
+    position: absolute;
+    z-index: 10;
+  }
+  
+  .nav-Home {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Home:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Projects {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Projects:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Price {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Price:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Aboutus {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Aboutus:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Login {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .nav-Login:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .CloudDeploy {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 0.3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }
+  
+  .CloudDeploy:hover {
+    font-family: "Courier New", Courier, monospace;
+    border: none;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    width: 65px;
+    height: 65px;
+  }

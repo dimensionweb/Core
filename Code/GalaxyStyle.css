@@ -1,0 +1,265 @@
+.solar {
+    position: absolute;
+    top: 400px;
+    left: auto;
+    right: 200px;
+    width: 220px;
+    height: 220px;
+    opacity: 0.1;
+  
+    -webkit-animation: spin 120s linear infinite;
+    -moz-animation: spin 120s linear infinite;
+    animation: spin 120s linear infinite;
+  }
+  
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes floatingsolar {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -8px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .moon1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    bottom: auto;
+    left: 150px;
+    right: auto;
+    opacity: 0.1;
+  
+    animation-name: floatingmoon1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingmoon1 {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -8px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .moon2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 450px;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    opacity: 0.1;
+  
+    animation-name: floatingmoon2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingmoon2 {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .earth {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 470px;
+    bottom: auto;
+    left: 20px;
+    right: auto;
+    opacity: 0.1;
+  
+    animation-name: floatingearth;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingearth {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 8px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .ufo1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 430px;
+    bottom: auto;
+    left: 50px;
+    right: auto;
+  
+    animation-name: floatingufo1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingufo1 {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(-8px, 4px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .ufo2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 430px;
+    bottom: auto;
+    left: auto;
+    right: 50px;
+  
+    animation-name: floatingufo2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingufo2 {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(-8px, -4px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .saturn {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 400px;
+    bottom: auto;
+    left: auto;
+    right: -60px;
+    opacity: 0.1;
+  
+    animation-name: floatingsaturn;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingsaturn {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .neptune {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    bottom: auto;
+    left: auto;
+    right: -60px;
+    opacity: 0.1;
+  
+    animation-name: floatingneptune;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingneptune {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .comet {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -150px;
+    bottom: auto;
+    left: auto;
+    right: 110px;
+    opacity: 0.1;
+    z-index: -99999;
+  
+    animation-name: floatingcomet;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floatingcomet {
+    0% {
+      transform: translate(-0px, 0px) rotateZ(90deg);
+    }
+    50% {
+      transform: translate(0px, 0px) rotateZ(90deg);
+    }
+    100% {
+      transform: translate(-1000px, 1000px) rotateZ(90deg);
+    }
+  }
