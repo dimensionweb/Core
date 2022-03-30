@@ -54,7 +54,7 @@ function CloseScreen2() {
 }
 
 function CloseScreen3() {
-  document.getElementById("DeployPortal3").style.visibility = "hidden";
+  document.getElementById("ConsoleInfo").style.visibility = "hidden";
 }
 
 function OpenColorMenu() {
