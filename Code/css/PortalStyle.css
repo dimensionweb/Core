@@ -89,6 +89,19 @@
     border: 0.01rem solid rgba(0, 0, 0, 0.185);
   }
   
+  .secure-server {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    top: 181px;
+    left: 438px;
+    margin-bottom: auto;
+    margin-right: auto;
+    background-color: #000000ee;
+    border-radius: 0.8rem;
+    border: 0.01rem solid rgba(0, 0, 0, 0.185);
+  }
+
   .ConsoleInfo {
     position: absolute;
     width: 400px;
