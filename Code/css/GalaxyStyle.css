@@ -1,5 +1,5 @@
 .solar {
-    position: absolute;
+    position: fixed;
     top: 400px;
     left: auto;
     right: 200px;
@@ -42,7 +42,7 @@
   }
   
   .moon1 {
-    position: absolute;
+    position: fixed;
     width: 120px;
     height: 120px;
     top: 450px;
@@ -70,7 +70,7 @@
   }
   
   .moon2 {
-    position: absolute;
+    position: fixed;
     width: 120px;
     height: 120px;
     top: 450px;
@@ -98,7 +98,7 @@
   }
   
   .earth {
-    position: absolute;
+    position: fixed;
     width: 250px;
     height: 250px;
     top: 470px;
@@ -126,7 +126,7 @@
   }
   
   .ufo1 {
-    position: absolute;
+    position: fixed;
     width: 150px;
     height: 150px;
     top: 430px;
@@ -153,7 +153,7 @@
   }
   
   .ufo2 {
-    position: absolute;
+    position: fixed;
     width: 150px;
     height: 150px;
     top: 430px;
@@ -180,7 +180,7 @@
   }
   
   .saturn {
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 400px;
     top: 400px;
@@ -208,7 +208,7 @@
   }
   
   .neptune {
-    position: absolute;
+    position: fixed;
     width: 300px;
     height: 300px;
     top: -50px;
@@ -236,7 +236,7 @@
   }
   
   .comet {
-    position: absolute;
+    position: fixed;
     width: 200px;
     height: 200px;
     top: -150px;

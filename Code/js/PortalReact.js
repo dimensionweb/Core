@@ -2,7 +2,9 @@
 window.addEventListener("load", (event) => {
   //CloudDeploy
   dragElement(document.getElementById("DeployPortal1"));
-  //Projects
+  //iFrame
+  dragElement(document.getElementById("DeployPortal3"));
+  //secure.server
   dragElement(document.getElementById("secure-server"));
   //ColorPicker
   dragElement(document.getElementById("DeployPortal2"));

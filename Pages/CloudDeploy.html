@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <title>DimensionCloud</title>
+
 <link rel="stylesheet" href="/Code/css/style.css">
 <link rel="stylesheet" href="/Code/css/MenuStyle.css">
 <link rel="stylesheet" href="/Code/css/ColorMenuStyle.css">
 <link rel="stylesheet" href="/Code/css/PortalStyle.css">
 <link rel="stylesheet" href="/Code/css/GalaxyStyle.css">
 <link rel="favicon" href="/Data/icons/favicon.ico">
+
 <script src="/Code/js/NavbarMenu.js"></script>
 <script src="/Code/js/PortalReact.js"></script>
 <script src="/Code/js/PickerColor.js"></script>
 <script src="/Code/js/PortalMenu.js"></script>
 <script src="/Code/js/WebDeploy.js"></script>
+
 <script>window.addEventListener('load', (event) => { document.getElementById("CloudDeploy").style.opacity = "1"; });</script>
-<script>window.addEventListener('load', (event) => { document.getElementById("menuZoomReset").style.visibility = "hidden"; });</script>
-<script>window.addEventListener('load', (event) => { document.getElementById("color-buttonClose").style.visibility = "hidden"; });</script>
+
 <img id="logo" class="logo" onclick="home()" src="/Data/logo.gif">
 
 <head>
@@ -41,75 +43,6 @@
     <img id="comet" class="comet" src="/Data/icons/comet.png" draggable="false">
   </div>
 
-  <div id="DeployPortal1" class="BasePortal DeployPortal1">
-
-    <div id="portal-menu" class="portal-menu">
-      <div id="menuClose" class="menuBase menuClose" onclick="CloseScreen()"></div>
-      <div id="menuZoom" class="menuBase menuZoom" onclick="FullScreen()"></div>
-      <div id="menuZoomReset" class="menuBase menuZoomReset" onclick="ResetScreen()"></div>
-    </div>
-
-    <div id="deploy-status" class="deploy-status">
-      <img id="brain" class="brain" src="/Data/icons/brain.png">
-      <img id="test-tube" class="test-tube" src="/Data/icons/webp/test-tube.webp">
-      <img id="rocket" class="rocket" src="/Data/icons/webp/rocket.webp">
-    </div>
-
-    <div class="stack-image-upload">
-      <label for="file-input">
-        <img id="plus" class="plus" src="/Data/icons/webp/plus.webp">
-      </label>
-      <input id="file-input" type="file" onchange="UploadImage()" accept=".yml">
-    </div>
-
-    <div id="show-code"></div>
-  
-  </div>
-
-  <div id="DeployPortal2" class="BasePortal DeployPortal2">
-
-    <div id="portal-menu2" class="portal-menu2">
-      <div id="menuClose2" class="menuBase menuClose2" onclick="CloseScreen2()"></div>
-    </div>
-
-    <div id="tools" class="tools" draggable="false">
-      <img id="move" class="move" src="/Data/icons/webp/move.webp" draggable="false">
-      <img id="resize" class="resize" src="/Data/icons/webp/resize.webp" draggable="false">
-      <img id="meter" class="meter" src="/Data/icons/webp/meter.webp" draggable="false">
-      <img id="color-button" class="color-button" src="/Data/icons/color.png" draggable="false" onclick="OpenColorMenu()">
-      <img id="color-buttonClose" class="color-button" src="/Data/icons/color.png" draggable="false" onclick="CloseScreen3()">
-    </div>
-
-    <div id="color-menu" class="color-menu">
-      <div id="color-var1" class="color-varbase color-var1" onclick="SetColorVar1()"></div>
-      <div id="color-var2" class="color-varbase color-var2" onclick="SetColorVar2()"></div>
-      <div id="color-var3" class="color-varbase color-var3" onclick="SetColorVar3()"></div>
-      <div id="color-var4" class="color-varbase color-var4" onclick="SetColorVar4()"></div>
-      <div id="color-var5" class="color-varbase color-var5" onclick="SetColorVar5()"></div>
-      <div id="color-var6" class="color-varbase color-var6" onclick="SetColorVar6()"></div>
-      <div id="color-var7" class="color-varbase color-var7" onclick="SetColorVar7()"></div>
-      <div id="color-var8" class="color-varbase color-var8" onclick="SetColorVar8()"></div>
-      <div id="color-var9" class="color-varbase color-var9" onclick="SetColorVar9()"></div>
-      <div id="color-var10" class="color-varbase color-var10" onclick="SetColorVar10()"></div>
-      <div id="color-var11" class="color-varbase color-var11" onclick="SetColorVar11()"></div>
-      <div id="color-var12" class="color-varbase color-var12" onclick="SetColorVar12()"></div>
-      <div id="color-var13" class="color-varbase color-var13" onclick="SetColorVar13()"></div>
-      <div id="color-var14" class="color-varbase color-var14" onclick="SetColorVar14()"></div>
-      <div id="color-var15" class="color-varbase color-var15" onclick="SetColorVar15()"></div>
-      <div id="color-var16" class="color-varbase color-var16" onclick="SetColorVar16()"></div>
-      <div id="color-var17" class="color-varbase color-var17" onclick="SetColorVar17()"></div>
-      <div id="color-var18" class="color-varbase color-var18" onclick="SetColorVar18()"></div>
-      <div id="color-var19" class="color-varbase color-var19" onclick="SetColorVar19()"></div>
-      <div id="color-var20" class="color-varbase color-var20" onclick="SetColorVar20()"></div>
-      <div id="picker" class="picker"></div>
-      <div id="picker-inside" class="picker-inside"></div>
-    </div>
-    
-  </div>
-
-  <canvas id="picker-selector" class="picker-selector"></canvas>
-
 </body>
 </head>
-
 </html>
