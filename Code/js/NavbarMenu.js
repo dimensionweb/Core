@@ -22,13 +22,13 @@ function aboutus() {
 function login() {
   if (window.location.href.indexOf("projects") != -1) {
     OpeniFrame();
-  } else window.location.replace("/Pages/projects.html");
+  }
+
+  if (window.location.href.indexOf("CloudDeploy") != -1) {
+    OpenCloudDeploy();
+  }
 }
 function CloudDeploy() {
-  if (window.location.href.indexOf("CloudDeploy") != -1) {
-    document.getElementById("CloudDeployPortal").style.visibility = "visible";
-    document.getElementById("menuClose").style.visibility = "visible";
-    document.getElementById("menuZoom").style.visibility = "visible";
-  } else window.location.replace("/Pages/CloudDeploy.html");
+  window.location.replace("/Pages/CloudDeploy.html");
 }
 //NAVBAR FUNCTIONS CALLBACKS END /////////////////////////////

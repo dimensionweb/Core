@@ -43,6 +43,31 @@
     <img id="comet" class="comet" src="/Data/icons/comet.png" draggable="false">
   </div>
 
+  <div id="CloudDeployPortal" class="BasePortal CloudDeployPortal">
+
+    <div id="portal-menu" class="portal-menu">
+      <div id="menuClose" class="menuBase menuClose" onclick="CloseCloudDeploy()"></div>
+      <div id="menuZoom" class="menuBase menuZoom" onclick="FullScreen()"></div>
+      <div id="menuZoomReset" class="menuBase menuZoomReset" onclick="ResetScreen()"></div>
+    </div>
+
+    <div id="deploy-status" class="deploy-status">
+      <img id="brain" class="brain" src="/Data/icons/brain.png">
+      <img id="test-tube" class="test-tube" src="/Data/icons/webp/test-tube.webp">
+      <img id="rocket" class="rocket" src="/Data/icons/webp/rocket.webp">
+    </div>
+
+    <div class="stack-image-upload">
+      <label for="file-input">
+        <img id="plus" class="plus" src="/Data/icons/webp/plus.webp">
+      </label>
+      <input id="file-input" type="file" onchange="UploadImage()" accept=".yml">
+    </div>
+
+    <div id="show-code"></div>
+  
+  </div>
+
 </body>
 </head>
 </html>
