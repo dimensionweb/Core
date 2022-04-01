@@ -100,6 +100,7 @@
     background-color: #000000ee;
     border-radius: 0.8rem;
     border: 0.01rem solid rgba(0, 0, 0, 0.185);
+    visibility: hidden;
   }
 
   .ConsoleInfo {
