@@ -22,6 +22,7 @@ function aboutus() {
 function login() {
   if (window.location.href.indexOf("projects") != -1) {
     OpeniFrame();
+    OpenToolBar();
   }
   if (window.location.href.indexOf("CloudDeploy") != -1) {
     OpenCloudDeploy();
