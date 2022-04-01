@@ -23,9 +23,11 @@ function login() {
   if (window.location.href.indexOf("projects") != -1) {
     OpeniFrame();
   }
-
   if (window.location.href.indexOf("CloudDeploy") != -1) {
     OpenCloudDeploy();
+  }
+  if (window.location.href.indexOf("aboutus") != -1) {
+    OpenSecureServer();
   }
 }
 function CloudDeploy() {

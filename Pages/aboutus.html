@@ -10,6 +10,7 @@
 
 <script src="/Code/js/NavbarMenu.js"></script>
 <script src="/Code/js/PortalReact.js"></script>
+<script src="/Code/js/PortalMenu.js"></script>
 <script src="/Code/js/PickerColor.js"></script>
 <script src="/Code/js/WebDeploy.js"></script>
 
@@ -42,6 +43,20 @@
     <img id="comet" class="comet" src="/Data/icons/comet.png">
   </div>
 
+  <div id="secure-server" class="BasePortal secure-server">
+
+    <div id="portal-menu" class="portal-menu">
+      <div id="menuClose" class="menuBase menuClose" onclick="CloseSecureServer()"></div>
+      <div id="menuZoom" class="menuBase menuZoom" onclick="FullScreen()"></div>
+      <div id="menuZoomReset" class="menuBase menuZoomReset" onclick="ResetScreen()"></div>
+    </div>
+
+    <div id="iFrame" class="iFrame">
+      <iframe id="iFrameit" class="iFrameit" src="https://backend.dimension.codes" frameborder="0"></iframe>
+    </div>
+
+  </div>
+  
 </body>
 </head>
 </html>
