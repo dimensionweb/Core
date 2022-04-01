@@ -50,6 +50,14 @@ function CloseConsoleInfo() {
 //////////////////////////////////////////////OPEN FUNCTION START/////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//OpeniFrame
+function OpeniFrame() {
+  if ((document.getElementById("iFramePortal").style.visibility = "hidden")) {
+    document.getElementById("iFramePortal").style.visibility = "visible";
+    document.getElementById("iFramePortal").style.visibility = "visible";
+  }
+}
+
 //OpenSecureServer
 function OpenSecureServer() {
   if ((document.getElementById("secure-server").style.visibility = "hidden")) {

@@ -20,7 +20,9 @@ function aboutus() {
   window.location.replace("/Pages/aboutus.html");
 }
 function login() {
-  window.location.replace("https://gitpod.io/workspaces");
+  if (window.location.href.indexOf("projects") != -1) {
+    OpeniFrame();
+  } else window.location.replace("/Pages/projects.html");
 }
 function CloudDeploy() {
   if (window.location.href.indexOf("CloudDeploy") != -1) {
