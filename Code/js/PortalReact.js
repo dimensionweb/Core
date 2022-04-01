@@ -1,13 +1,10 @@
 //DeployPortal MOVE FUNCTIONS START //////////////////////////////
 window.addEventListener("load", (event) => {
-  //CloudDeploy
-  dragElement(document.getElementById("DeployPortal1"));
-  //iFrame
-  dragElement(document.getElementById("DeployPortal3"));
-  //secure.server
+
+  dragElement(document.getElementById("CloudDeployPortal"));
+  dragElement(document.getElementById("iFramePortal"));
   dragElement(document.getElementById("secure-server"));
-  //ColorPicker
-  dragElement(document.getElementById("DeployPortal2"));
+  dragElement(document.getElementById("ToolBar"));
   dragElement(document.getElementById("picker-selector"));
 
   function dragElement(elmnt) {

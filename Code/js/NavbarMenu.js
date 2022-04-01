@@ -24,7 +24,7 @@ function login() {
 }
 function CloudDeploy() {
   if (window.location.href.indexOf("CloudDeploy") != -1) {
-    document.getElementById("DeployPortal1").style.visibility = "visible";
+    document.getElementById("CloudDeployPortal").style.visibility = "visible";
     document.getElementById("menuClose").style.visibility = "visible";
     document.getElementById("menuZoom").style.visibility = "visible";
   } else window.location.replace("/Pages/CloudDeploy.html");

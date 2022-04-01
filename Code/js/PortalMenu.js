@@ -3,23 +3,23 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //CloudDeploy CLOSE
-function CloseScreen() {
-  document.getElementById("DeployPortal1").style.visibility = "hidden";
+function CloseCloudDeploy() {
+  document.getElementById("CloudDeployPortal").style.visibility = "hidden";
   document.getElementById("menuClose").style.visibility = "hidden";
   document.getElementById("menuZoom").style.visibility = "hidden";
   document.getElementById("menuZoomReset").style.visibility = "hidden";
 }
 
 //ToolBar CLOSE
-function CloseScreen2() {
-  document.getElementById("DeployPortal2").style.visibility = "hidden";
+function CloseToolBar() {
+  document.getElementById("ToolBar").style.visibility = "hidden";
   document.getElementById("color-menu").style.visibility = "hidden";
   document.getElementById("color-buttonClose").style.visibility = "hidden";
   document.getElementById("picker-selector").style.visibility = "hidden";
 }
 
 //ToolBarColorMenu CLOSE
-function CloseScreen3() {
+function CloseToolBarColorMenu() {
   document.getElementById("color-menu").style.visibility = "hidden";
   document.getElementById("picker-selector").style.visibility = "hidden";
   document.getElementById("color-buttonClose").style.visibility = "hidden";
@@ -28,17 +28,17 @@ function CloseScreen3() {
 }
 
 //SecureServer CLOSE
-function CloseScreen4() {
+function CloseSecureServer() {
   document.getElementById("secure-server").style.visibility = "hidden";
 }
 
 //iFrame CLOSE
 function CloseScreen5() {
-  document.getElementById("DeployPortal3").style.visibility = "hidden";
+  document.getElementById("iFramePortal").style.visibility = "hidden";
 }
 
 //ConsoleInfo CLOSE
-function CloseScreen6() {
+function CloseConsoleInfo() {
   document.getElementById("ConsoleInfo").style.visibility = "hidden";
 }
 
@@ -59,15 +59,15 @@ function OpenSecureServer() {
 
 //OpenCloudDeploy
 function OpenCloudDeploy() {
-  if ((document.getElementById("DeployPortal1").style.visibility = "hidden")) {
-    document.getElementById("DeployPortal1").style.visibility = "visible";
+  if ((document.getElementById("CloudDeployPortal").style.visibility = "hidden")) {
+    document.getElementById("CloudDeployPortal").style.visibility = "visible";
   }
 }
 
 //OpenToolBar
 function OpenToolBar() {
-  if ((document.getElementById("DeployPortal2").style.visibility = "hidden")) {
-    document.getElementById("DeployPortal2").style.visibility = "visible";
+  if ((document.getElementById("ToolBar").style.visibility = "hidden")) {
+    document.getElementById("ToolBar").style.visibility = "visible";
   }
 }
 
@@ -94,7 +94,7 @@ function OpenColorMenu() {
 function FullScreen() {
   document.getElementById("menuZoom").style.visibility = "hidden";
   document.getElementById("menuZoomReset").style.visibility = "visible";
-  var DeployPortalStyle = document.getElementById("DeployPortal1");
+  var DeployPortalStyle = document.getElementById("CloudDeployPortal");
   DeployPortalStyle.setAttribute("style", "height: 600px");
   var iFrameitStyle = document.getElementById("iFrameit");
   iFrameitStyle.setAttribute("style", "height: 570px");
@@ -112,7 +112,7 @@ function FullScreen() {
 function ResetScreen() {
   document.getElementById("menuZoomReset").style.visibility = "hidden";
   document.getElementById("menuZoom").style.visibility = "visible";
-  var DeployPortalStyle = document.getElementById("DeployPortal1");
+  var DeployPortalStyle = document.getElementById("CloudDeployPortal");
   DeployPortalStyle.setAttribute("style", "height: 400px");
   var iFrameitStyle = document.getElementById("iFrameit");
   iFrameitStyle.setAttribute("style", "height: 400px");
